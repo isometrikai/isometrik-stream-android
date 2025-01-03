@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProductImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      app:srcCompat="@drawable/ism_ic_product_default_image"
+      android:layout_margin="@dimen/ism_dp_13"
+      />
+
+  <RelativeLayout
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      >
+  <TextView
+      android:id="@+id/tvFeaturing"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="@string/ism_featuring"
+      android:textColor="@color/ism_featuring_red"
+      android:textSize="@dimen/ism_sp_12"
+      android:layout_toStartOf="@+id/rlUpdateFeaturingStatus"
+      />
+
+  <TextView
+      android:id="@+id/tvProductName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvFeaturing"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Product Name"
+      android:layout_toStartOf="@+id/rlUpdateFeaturingStatus"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      />
+
+  <TextView
+      android:id="@+id/tvPrice"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_1"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="$20.00"
+      android:layout_toStartOf="@+id/rlUpdateFeaturingStatus"
+      android:textColor="@color/ism_quantity_grey"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+
+    <RelativeLayout
+        android:id="@+id/rlUpdateFeaturingStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginTop="@dimen/ism_dp_3"
+        android:background="@drawable/ism_request_button"
+        android:elevation="@dimen/ism_dp_1"
+        android:clickable="true"
+        android:focusable="true"
+        >
+
+      <TextView
+          android:id="@+id/tvFeaturingStatus"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:ellipsize="end"
+          android:maxLines="1"
+          android:paddingBottom="@dimen/ism_dp_4"
+          android:paddingEnd="@dimen/ism_dp_13"
+          android:paddingStart="@dimen/ism_dp_13"
+          android:paddingTop="@dimen/ism_dp_4"
+          android:text="@string/ism_start_featuring"
+          android:textColor="@color/ism_white"
+          />
+
+    </RelativeLayout>
+
+  </RelativeLayout>
+
+</RelativeLayout>

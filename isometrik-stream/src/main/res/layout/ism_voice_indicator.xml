@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+  <io.isometrik.gs.ui.dominantspeaker.VoiceIndicator
+      android:id="@+id/upper_indicator"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+  <io.isometrik.gs.ui.dominantspeaker.ReverseLearLayout
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+    <io.isometrik.gs.ui.dominantspeaker.VoiceIndicator
+        android:id="@+id/under_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+  </io.isometrik.gs.ui.dominantspeaker.ReverseLearLayout>
+
+</RelativeLayout>

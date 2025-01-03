@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlAdmin"
+      android:layout_width="110dp"
+      android:layout_height="wrap_content"
+      android:layout_centerVertical="true"
+      android:layout_toStartOf="@+id/swToggleChannel"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEdit"
+        android:layout_toStartOf="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        android:layout_marginBottom="@dimen/ism_dp_4"
+        app:srcCompat="@drawable/ism_ic_edit"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        app:srcCompat="@drawable/ism_ic_delete"
+        android:layout_alignParentEnd="true"
+        />
+
+  </RelativeLayout>
+
+    <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/swToggleChannel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ism_dp_3"
+        android:layout_marginEnd="@dimen/ism_dp_13"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        />
+
+  <TextView
+      android:id="@+id/tvChannelName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="@dimen/ism_dp_22"
+      android:layout_toEndOf="@+id/ivChannelImage"
+      android:layout_toStartOf="@+id/rlAdmin"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Channel Name"
+      android:textColor="@color/ism_black"
+      android:textSize="@dimen/ism_sp_16"
+      />
+  <TextView
+      android:id="@+id/tvChannelEndpoint"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvChannelName"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivChannelImage"
+      android:layout_toStartOf="@+id/rlAdmin"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Channel Endpoint"
+      android:textColor="@color/ism_identifier_text_grey"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@id/ivChannelImage"
+      android:layout_marginStart="@dimen/ism_dp_80"
+      android:layout_marginTop="@dimen/ism_dp_11"
+      android:background="@color/ism_line_gray"
+      />
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivChannelImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_default_profile_image"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivChannelType"
+      android:layout_width="@dimen/ism_dp_20"
+      android:layout_height="@dimen/ism_dp_20"
+      android:layout_alignEnd="@+id/ivChannelImage"
+      android:layout_alignBottom="@+id/ivChannelImage"
+      app:srcCompat="@drawable/ism_restream_facebook_preview"
+      app:tint="@color/ism_grey"
+      />
+
+</RelativeLayout>

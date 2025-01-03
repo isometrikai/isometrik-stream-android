@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--toolbar-->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ism_white"
+            android:padding="@dimen/ism_dp_0"
+            app:layout_scrollFlags="scroll"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:padding="@dimen/ism_dp_0">
+
+                    <TextView
+                        android:id="@+id/tvTitle"
+                        style="@style/TextAppearance.AppCompat.Medium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/sf_pro_semibold"
+                        android:textAllCaps="false"
+                        android:text="@string/wallet"
+                        android:textColor="@color/ism_black" />
+
+                    <ImageButton
+                        android:id="@+id/ibBack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentStart="true"
+                        android:layout_centerInParent="true"
+                        android:background="@android:color/transparent"
+                        android:contentDescription="@string/app_name"
+                        android:src="?attr/homeAsUpIndicator"
+                        app:tint="@color/ism_black" />
+
+                </RelativeLayout>
+
+                <!--balance-->
+                <RelativeLayout
+                    android:id="@+id/rlBalance"
+                    style="@style/Widget.AppCompat.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/ism_sp_20">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMyBalanceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7dp"
+                        android:textColor="@color/ism_black"
+                        android:textSize="@dimen/ism_sp_14"
+                        android:textStyle="bold"
+                        android:text="@string/coinBalance" />
+
+                    <ImageView
+                        android:id="@+id/ivCoin"
+                        android:layout_width="@dimen/ism_dp_25"
+                        android:layout_height="@dimen/ism_dp_25"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/tvMyBalanceText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_coin" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCoinBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ivCoin"
+                        android:layout_alignTop="@id/ivCoin"
+                        android:layout_alignBottom="@id/ivCoin"
+                        android:layout_marginStart="7dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/ism_black"
+                        android:text="@string/bal_zero"
+                         />
+
+                    <TextView
+                        android:id="@+id/tvTransactions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/curved_accent_color"
+                        android:paddingStart="@dimen/ism_sp_20"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="@dimen/ism_sp_20"
+                        android:paddingBottom="7dp"
+                        android:text="@string/transactions"
+                        android:textColor="@color/ism_white"
+                        android:textSize="@dimen/ism_sp_14"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+
+                <!--balance-->
+                <RelativeLayout
+                    android:id="@+id/rlWalletBalance"
+                    style="@style/Widget.AppCompat.ActionBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/ism_sp_20">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvMyWalletBalanceText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7dp"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/ism_sp_14"
+                        android:textColor="@color/ism_black"
+                        android:text="@string/moneyBalance" />
+
+                    <ImageView
+                        android:id="@+id/ivWallet"
+                        android:layout_width="@dimen/ism_dp_25"
+                        android:layout_height="@dimen/ism_dp_25"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@id/tvMyWalletBalanceText"
+                        android:contentDescription="@string/app_name"
+                        android:src="@drawable/ic_menu_wallet_new" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWalletBalance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ivWallet"
+                        android:layout_alignTop="@id/ivWallet"
+                        android:layout_alignBottom="@id/ivWallet"
+                        android:layout_marginStart="7dp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/ism_black"
+                        android:text="@string/bal_zero"
+                         />
+
+                    <TextView
+                        android:id="@+id/tvWalletTransactions"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/curved_accent_color"
+                        android:paddingStart="@dimen/ism_sp_20"
+                        android:paddingTop="7dp"
+                        android:paddingEnd="@dimen/ism_sp_20"
+                        android:paddingBottom="7dp"
+                        android:text="@string/transactions"
+                        android:textColor="@color/ism_white"
+                        android:textSize="@dimen/ism_sp_14"
+                        tools:ignore="RelativeOverlap" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!--list-->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_below="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvPackage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlBalance"
+            android:background="@color/gray_lighter"
+            android:padding="@dimen/ism_sp_10" />
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</RelativeLayout>

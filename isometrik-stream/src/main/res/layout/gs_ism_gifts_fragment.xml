@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <include
+      layout="@layout/popup_gifts"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vPeek" />
+
+  <androidx.coordinatorlayout.widget.CoordinatorLayout
+      android:id="@+id/clCoin"
+      android:visibility="gone"
+      android:layout_width="match_parent"
+      android:layout_height="240dp">
+
+    <FrameLayout
+        android:id="@+id/flCoinOne"
+        android:layout_width="@dimen/ism_dp_20"
+        android:layout_height="@dimen/ism_dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_30">
+
+      <ImageView
+          android:layout_width="10dp"
+          android:layout_height="10dp"
+          android:layout_gravity="start"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+
+      <ImageView
+          android:layout_width="@dimen/ism_dp_10"
+          android:layout_height="@dimen/ism_dp_10"
+          android:layout_gravity="end|bottom"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flCoinTwo"
+        android:layout_width="@dimen/ism_dp_20"
+        android:layout_height="@dimen/ism_dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_30">
+
+      <ImageView
+          android:layout_width="@dimen/ism_dp_10"
+          android:layout_height="@dimen/ism_dp_10"
+          android:layout_gravity="center_horizontal|top"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+
+      <ImageView
+          android:layout_width="@dimen/ism_dp_10"
+          android:layout_height="@dimen/ism_dp_10"
+          android:layout_gravity="start|bottom"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/flCoinThree"
+        android:layout_width="@dimen/ism_dp_20"
+        android:layout_height="@dimen/ism_dp_20"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        android:layout_marginBottom="@dimen/ism_dp_30">
+
+      <ImageView
+          android:layout_width="@dimen/ism_dp_10"
+          android:layout_height="@dimen/ism_dp_10"
+          android:layout_gravity="end"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+
+      <ImageView
+          android:layout_width="@dimen/ism_dp_10"
+          android:layout_height="@dimen/ism_dp_10"
+          android:layout_gravity="start|bottom"
+          android:contentDescription="@string/app_name"
+          android:src="@drawable/coin2" />
+    </FrameLayout>
+  </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</RelativeLayout>

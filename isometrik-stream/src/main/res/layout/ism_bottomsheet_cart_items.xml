@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_30"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/tvCheckout"
+      android:layout_alignParentEnd="true"
+      android:layout_width="wrap_content"
+      android:layout_height="@dimen/ism_dp_34"
+      android:layout_margin="@dimen/ism_dp_16"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_checkout"
+      android:paddingStart="@dimen/ism_dp_18"
+      android:paddingEnd="@dimen/ism_dp_18"
+      android:textColor="@color/ism_white"
+      android:gravity="center"
+      android:background="@drawable/ism_request_button"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      />
+
+  <TextView
+      android:id="@+id/tvHeading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_sold_shipped"
+      android:layout_below="@+id/vPeek"
+      android:textStyle="bold"
+      android:layout_marginTop="@dimen/ism_dp_3"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginBottom="@dimen/ism_dp_13"
+      android:maxLines="1"
+      android:ellipsize="end"
+      />
+
+  <TextView
+      android:id="@+id/tvProductsCount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_16"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_cart_products_count"
+      android:layout_below="@+id/tvHeading"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      android:layout_marginBottom="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:maxLines="1"
+      android:ellipsize="end"
+      />
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/rvCartProducts"
+      android:layout_marginTop="@dimen/ism_dp_5"
+      android:layout_marginBottom="@dimen/ism_dp_13"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductsCount"
+      />
+
+  <TextView
+      android:id="@+id/tvNoProducts"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      app:drawableTopCompat="@drawable/ism_ic_no_users"
+      android:gravity="center"
+      android:layout_margin="@dimen/ism_dp_36"
+      android:text="@string/ism_empty_cart"
+      android:textColor="@color/ism_white"
+      android:visibility="gone"
+      android:layout_below="@+id/tvProductsCount"
+      />
+
+  <com.facebook.shimmer.ShimmerFrameLayout
+      android:id="@+id/shimmerFrameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductsCount"
+      android:layout_marginTop="@dimen/ism_dp_5"
+      >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+      <include layout="@layout/ism_cart_product_item_shimmer" />
+      <include layout="@layout/ism_cart_product_item_shimmer" />
+      <include layout="@layout/ism_cart_product_item_shimmer" />
+
+    </LinearLayout>
+  </com.facebook.shimmer.ShimmerFrameLayout>
+
+</RelativeLayout>

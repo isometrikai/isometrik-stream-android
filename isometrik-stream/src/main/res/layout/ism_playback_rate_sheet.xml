@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rate_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@color/ism_transparent"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="@dimen/ism_dp_0"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_30"
+        android:background="@drawable/ism_playback_option_title_background"
+        android:gravity="center"
+        android:text="@string/ism_playback_speed"
+        android:textAlignment="center" />
+
+    <io.isometrik.gs.ui.utils.MaxHeightRecyclerView
+        android:id="@+id/rvRateOptions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:maxHeight="500dp"
+        tools:itemCount="3"
+        tools:listitem="@layout/ism_playback_options_list_item" />
+
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_40"
+        android:layout_marginTop="@dimen/ism_dp_8"
+        android:background="@drawable/ism_playback_option_background"
+        android:gravity="center"
+        android:text="@string/ism_close"
+        android:textColor="@color/ism_close_button_text" />
+</LinearLayout>

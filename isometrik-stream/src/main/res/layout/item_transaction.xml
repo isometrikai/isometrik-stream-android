@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/ism_dp_15">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransactionId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_15"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:includeFontPadding="false"
+        android:textColor="@color/ism_black"
+        android:textSize="@dimen/ism_sp_12"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Txn ID: *****156324" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBookingId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_15"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:textColor="@color/ism_black"
+        android:textSize="@dimen/ism_sp_12"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionId"
+        tools:text="@string/availabeBalance" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivMark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:src="@drawable/ic_arraow_credit"
+        app:layout_constraintBottom_toBottomOf="@+id/tvBookingId"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionId" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvDescription"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_15"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:layout_marginEnd="@dimen/ism_dp_70"
+        android:textColor="@color/ism_black"
+        android:textSize="@dimen/ism_sp_14"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvBookingId"
+        tools:text="@string/no_post_to_add_collection_msg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvTransactionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_15"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:textColor="@color/ism_grey"
+        android:textSize="@dimen/ism_sp_12"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvDescription"
+        tools:text="Date: 24/JUNE/2019 20:42" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_15"
+        android:textColor="@color/ism_black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/tvTransactionDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tvTransactionDate"
+        tools:text="USD 484.63" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_1"
+        android:layout_marginTop="@dimen/ism_dp_15"
+        android:background="@color/colorSilver1"
+        app:layout_constraintTop_toBottomOf="@+id/tvTransactionDate" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

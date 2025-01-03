@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <string name="ism_app_name" translatable="false">Isometrik Stream</string>
+  <string name="ism_error">Failed to complete requested operation, check Isometrik sdk logs for more details</string>
+
+
+  <!-- Streams Activity   -->
+  <string name="ism_go_live">Go Live</string>
+  <string name="ism_no_streams">No live streams found</string>
+  <string name="ism_live_streams">Live Streams</string>
+  <string name="ism_join">Join</string>
+  <string name="ism_fetching_streams">Fetching Streams</string>
+  <string name="ism_permission_start_streaming">Grant permission to start streaming!!</string>
+  <string name="ism_permission_start_streaming_denied">Permission to start streaming denied!!</string>
+  <string name="ism_search_streams_hint">Search streams…</string>
+  <!--Stream types-->
+  <!--  -->
+  <string name="ism_all">All</string>
+  <string name="ism_private_streams">Private</string>
+  <string name="ism_restream">Restream</string>
+  <string name="ism_multilive">Multilive</string>
+  <string name="ism_hd">HD</string>
+  <string name="ism_recorded">Recorded</string>
+
+  <!--  Copublish Activity-->
+  <string name="ism_no_gifts">No gifts currently available!!</string>
+  <string name="ism_gift_name">Gift No. %1$s</string>
+  <string name="ism_gift_category_animated">Animated Gifts</string>
+  <string name="ism_no_gifts_category">No gifts categories</string>
+  <string name="ism_remote_audio">%1$s remote audio</string>
+  <string name="ism_remote_video">%1$s remote video</string>
+  <string name="ism_mute">Mute</string>
+  <string name="ism_unmute">Unmute</string>
+  <string name="ism_type_something_here">Send a message…</string>
+  <string name="ism_live_indicator">Live</string>
+  <string name="ism_offline_indicator">Offline</string>
+  <string name="ism_connecting_indicator">Connecting</string>
+  <string name="ism_message_removed">The message has been removed by %1$s at %2$s</string>
+  <string name="ism_delete_unsent_message">A message can only be deleted after it has been sent.</string>
+  <string name="ism_reply_to_unsent_message">A message can only be replied to after it has been sent.</string>
+  <string name="ism_view_replies"><u>View Replies</u></string>
+
+  <string name="ism_you">%1$s(Me)</string>
+  <string name="ism_coins">%1$s coins</string>
+
+  <string name="ism_viewer_left">%1$s left the audience</string>
+  <string name="ism_viewer_joined">%1$s joined the audience</string>
+  <string name="ism_viewer_removed">%1$s has been kicked out of the audience by %2$s</string>
+  <string name="ism_viewer_timeout">%1$s in the audience, is not Live anymore</string>
+
+  <string name="ism_member_left">%1$s left the publisher\'s group</string>
+  <string name="ism_member_added">%1$s has been added to the publisher\'s group by %2$s</string>
+  <string name="ism_member_removed">%1$s has been kicked out of the publisher\'s group by %2$s</string>
+  <string name="ism_member_timeout">%1$s in the publisher\'s group, is not Live anymore</string>
+
+  <string name="ism_member_publish_start">%1$s in the publisher\'s group started streaming</string>
+  <string name="ism_member_publish_stop">%1$s in the publisher\'s group stopped streaming</string>
+
+  <string name="ism_member_kicked_out">You\'ve been kicked out of the publisher\'s group by %1$s</string>
+  <string name="ism_viewer_kicked_out">You\'ve been kicked out of the audience by %1$s</string>
+
+  <string name="ism_leave">Leave</string>
+
+  <string name="ism_filters">Filters</string>
+  <string name="ism_masks">Masks</string>
+  <string name="ism_effects">Effects</string>
+  <string name="ism_clear_all">Clear All</string>
+
+  <string name="ism_hello">Hello</string>
+
+
+  <string name="ism_adding_request">Sending copublish request</string>
+  <string name="ism_removing_request">Deleting copublish request</string>
+  <string name="ism_switching_profile">Switching profile</string>
+  <string name="ism_got_it">GOT IT</string>
+  <string name="ism_not_authorized_publisher">Not authorized to join broadcast as publisher</string>
+  <string name="ism_not_authorized_audience">Not authorized to join broadcast as viewer</string>
+  <string name="ism_streaming_fail">Failed to join broadcast with error code %1$d</string>
+  <string name="ism_streaming_fail_no_network">Failed to preview broadcast as internet connection is not available.</string>
+  <string name="ism_streaming_preview_fail_reason">Failed to preview broadcast with error %1$s</string>
+  <string name="ism_streaming_session_fail">Failed to join broadcast with error %1$s</string>
+  <string name="ism_metadata_received">Timed metadata received - </string>
+  <string name="ism_streaming_join_error">Failed to join broadcast with error %1$s</string>
+
+  <!--Disclaimer warning-->
+  <string name="ism_disclaimer_message">We moderate Live broadcasts.\nSmoking,vulgarity,porn,indecent exposure,child pornography is not allowed and will be banned.\nLive broadcasts are monitored 24 hours a day. </string>
+  <string name="ism_warning_message">Warning: third-party topup or recharge is subject to account closure,suspension or permanent ban. </string>
+
+  <!--Members Fragment-->
+  <string name="ism_stream_members">Members</string>
+  <string name="ism_no_members">No members found</string>
+  <string name="ism_admin">Host</string>
+  <string name="ism_removing_member">Removing member</string>
+  <string name="ism_not_publishing">Not publishing</string>
+  <string name="ism_search_members_hint">Search members…</string>
+
+  <!--Viewers Fragment-->
+  <string name="ism_stream_viewers">Viewers</string>
+  <string name="ism_no_viewers">No viewers found</string>
+  <string name="ism_remove">Remove</string>
+  <string name="ism_removing_viewer">Removing viewer</string>
+  <string name="ism_search_viewers_hint">Search viewers…</string>
+
+  <string name="ism_stream_offline_initiator_stop">Broadcast has been ended by the initiator</string>
+  <string name="ism_stream_offline_no_publisher">Broadcast is no longer live as none of the members in the publisher\'s group are publishing now</string>
+  <string name="ism_stream_offline">Broadcast is no longer live</string>
+
+  <!-- Users Activity   -->
+  <string name="ism_create_user">Create User</string>
+  <string name="ism_no_users">No registered users found</string>
+  <string name="ism_users">Users</string>
+  <string name="ism_select">Select</string>
+  <string name="ism_search_users_hint">Search users…</string>
+
+  <!-- Create User Activity   -->
+  <string name="ism_user_password">User Password*</string>
+  <string name="ism_enter_user_password">Enter user password</string>
+  <string name="ism_next">Next</string>
+  <string name="ism_user_name">User Name*</string>
+  <string name="ism_user_identifier">User Identifier*</string>
+  <string name="ism_enter_user_name">Enter user name</string>
+  <string name="ism_enter_user_identifier">Enter username, phone or email</string>
+  <string name="ism_select_user"> Select user</string>
+  <string name="ism_avoid_create_user">Don\'t wanna create user?</string>
+  <string name="ism_permission_image_capture">Grant permission to capture image!!</string>
+  <string name="ism_permission_image_capture_denied">Permission to capture image denied!!</string>
+  <string name="ism_image_capture_canceled">Image capture canceled!!</string>
+  <string name="ism_image_capture_failure">Failed to capture image!!</string>
+  <string name="ism_camera_not_found">Camera not found!!</string>
+  <string name="ism_ok">OK</string>
+  <string name="ism_invalid_username">Add user name to continue!!</string>
+  <string name="ism_invalid_user_identifier">Add user identifier to continue!!</string>
+  <string name="ism_invalid_user_image">Add user profile pic to continue!!</string>
+  <string name="ism_creating_user">Creating user</string>
+  <string name="ism_uploading_image">Uploading image</string>
+  <string name="ism_user_image_alert_heading">User profile image</string>
+  <string name="ism_user_image_alert_message">Create user without a profile image?</string>
+  <string name="ism_yes">Yes</string>
+  <string name="ism_no">No</string>
+  <string name="ism_missing_user_password">Add user password to continue!!</string>
+  <string name="ism_invalid_user_password">Password must be atleast 6 characters long and should have atleast one each of digit,small,capital alphabets and special character!!</string>
+
+
+  <!-- Edit User Activity   -->
+
+  <string name="ism_save">Save</string>
+  <string name="ism_edit_user">Edit User</string>
+  <string name="ism_updating_user_details">Updating user details</string>
+  <string name="ism_edit_user_details_canceled">Edit user details canceled!!</string>
+  <string name="ism_edit_user_details_failed">Failed to update user details!!</string>
+
+  <!-- User Details Activity   -->
+
+  <string name="ism_user_details">User Details</string>
+  <string name="ism_user_name_holder">User Name</string>
+  <string name="ism_user_identifier_holder">User Identifier</string>
+  <string name="ism_switch_user">Switch User</string>
+  <string name="ism_deleting_user">Deleting user</string>
+  <string name="ism_ar_camera">AR Camera</string>
+  <string name="ism_restream_channels">Restream Channels</string>
+  <string name="ism_rtmp_ingest_url">RTMP Ingest Url</string>
+  <string name="ism_rtmp_ingest_url_not_requested">RTMP ingest url not requested yet…</string>
+
+  <!--Stream details activity-->
+
+  <string name="ism_initiated_by">Initiated by %1$s , %2$s</string>
+
+  <!--Add member fragment-->
+
+  <string name="ism_add">Add</string>
+  <string name="ism_adding_member">Adding member</string>
+  <string name="ism_no_users_add_member">No users found to add to broadcast</string>
+  <string name="ism_no_viewers_add_member">No viewers found to add to broadcast</string>
+  <string name="ism_fetching_users">Fetching users</string>
+  <string name="ism_golive_heading">Go Live with</string>
+  <string name="ism_golive_description">When you go live with someone, anyone who can watch their broadcast can watch it too.</string>
+
+  <!--Select member activity-->
+
+  <string name="ism_new_broadcast">New Broadcast</string>
+  <string name="ism_add_members">Add members</string>
+  <string name="ism_max_members_selected">A broadcast cannot have more than 6 members</string>
+  <string name="ism_invalid_broadcast_description">Add broadcast description to continue!!</string>
+  <string name="ism_starting_broadcast">Starting broadcast</string>
+  <string name="ism_no_users_start_broadcast">No users found to co-broadcast with</string>
+  <string name="ism_restream_audio_only_not_supported">Restream not supported for audio only broadcasts</string>
+  <string name="ism_public_not_supported">Public mode only supported for multi-live broadcasts</string>
+
+  <!-- Connection activity -->
+
+  <string name="ism_connection_lost">You are offline!!</string>
+
+
+  <!--Copublish-->
+  <string name="ism_stream_requests">Requests</string>
+  <string name="ism_accept">Accept</string>
+  <string name="ism_decline">Decline</string>
+  <string name="ism_search_copublish_requests_hint">Search copublish requests…</string>
+
+
+  <string name="ism_mute_local_audio">Mute my audio</string>
+  <string name="ism_unmute_local_audio">Unmute my audio</string>
+  <string name="ism_mute_remote_audio">Mute remote audio</string>
+  <string name="ism_mute_local_video">Mute my video</string>
+  <string name="ism_unmute_local_video">Unmute my video</string>
+  <string name="ism_mute_remote_video">Mute remote video</string>
+  <string name="ism_enable_messages">Show chat messages</string>
+  <string name="ism_disable_messages">Hide chat messages</string>
+  <string name="ism_enable_network_stats">Show network stats</string>
+  <string name="ism_disable_network_stats">Hide network stats</string>
+  <string name="ism_enable_control_buttons">Show control buttons</string>
+  <string name="ism_disable_control_buttons">Hide control buttons</string>
+  <string name="ism_kickout">Kickout</string>
+  <string name="ism_warning_leave">Are you sure you want to leave the live broadcast?</string>
+  <string name="ism_warning_end">Are you sure you want to end your live broadcast?</string>
+  <string name="ism_cancel">Cancel</string>
+  <string name="ism_end_broadcast">End Broadcast</string>
+  <string name="ism_leave_broadcast">Leave Broadcast</string>
+  <string name="ism_copublish_request_heading">Request to be a co-publisher in the live broadcast</string>
+  <string name="ism_copublish_request_description">Once you join a live broadcast as a co-publisher, anybody can watch and some of your followers may get notified</string>
+  <string name="ism_send_request">Send Request</string>
+  <string name="ism_copublish_accepted_heading">%1$s has accepted your request to join the live broadcast as a co-publisher</string>
+  <string name="ism_copublish_accepted_description">You can now join the live broadcast as a co-publisher and start publishing</string>
+  <string name="ism_start_publishing">Start Broadcasting</string>
+  <string name="ism_copublish_rejected_heading">%1$s has rejected your request to join the live broadcast as a co-publisher</string>
+  <string name="ism_copublish_rejected_description">You can either continue watching or exit from the live broadcast</string>
+  <string name="ism_continue">Continue</string>
+  <string name="ism_exit">Exit</string>
+  <string name="ism_download">Download</string>
+  <string name="ism_your_live">You\'re Live</string>
+  <string name="ism_notified_users">We\'ve sent a notification to application users, they will start to join soon</string>
+  <string name="ism_host">Host</string>
+  <string name="ism_viewers_count">%1$s viewers</string>
+  <string name="ism_request_message">%1$s has sent a request to be part of the live broadcast as a co-publisher</string>
+
+  <string name="ism_copublish_previously_accepted_heading">%1$s has previously accepted your request to join the live broadcast as a co-publisher</string>
+  <string name="ism_copublish_previously_accepted_description">Not being a co-publisher anymore, you can either continue watching or exit from the live broadcast</string>
+  <string name="ism_copublish_previously_rejected_heading">%1$s has previously rejected your request to join the live broadcast as a co-publisher</string>
+
+  <!--  Effects fragment-->
+  <string name="filters_download_required">&lt;&lt;&lt;&lt; Download filters required</string>
+  <string name="ism_download_filters">Download filters</string>
+  <string name="ism_downloading_filters">Downloading filters…</string>
+  <string name="ism_download_size">Download size-</string>
+  <string name="preparing_filters">Preparing filters</string>
+  <string name="filters_prepare_failed">Failed to prepare filters</string>
+  <string name="filters_prepared">Filters prepared successfully</string>
+  <string name="ism_voice_change">Voice change</string>
+  <string name="ism_reverberation">Reverberation</string>
+
+  <!--  Requests fragment-->
+  <string name="ism_accepted">Request accepted</string>
+  <string name="ism_declined">Request declined</string>
+  <string name="ism_accepting_request">Accepting copublish request</string>
+  <string name="ism_declining_request">Declining copublish request</string>
+  <string name="ism_no_requests">No co-publish requests found</string>
+
+  <!--  Golive Activity-->
+  <string name="ism_disclaimer">BROADCASTERS UNDER 17 ARE NOT PERMITTED</string>
+  <string name="ism_public">PUBLIC</string>
+  <string name="ism_private">PRIVATE</string>
+  <string name="ism_cover_photo">Cover Photo</string>
+  <string name="ism_stream_title_ph">Add stream title</string>
+  <string name="ism_stream_title">Stream title*</string>
+  <string name="ism_multiguest_live">Multi Guest LIVE</string>
+  <string name="ism_permission_gallery">Grant permission to select cover photo!!</string>
+  <string name="ism_permission_gallery_denied">Permission to select cover photo denied!!</string>
+  <string name="ism_gallery_cancel">Selection of cover photo has been canceled!!</string>
+  <string name="ism_capturing_image">Capturing image</string>
+  <string name="ism_audio_only">Audio Only</string>
+  <string name="ism_hd_broadcast">HD broadcast</string>
+  <string name="ism_record_broadcast">Record broadcast</string>
+  <string name="ism_low_latency">Low latency</string>
+  <string name="ism_restream_broadcast">Restream broadcast</string>
+  <string name="ism_ecommerce">Ecommerce</string>
+  <string name="ism_self_hosted">Self hosted</string>
+  <string name="ism_rtmp_ingest">RTMP ingest</string>
+  <string name="ism_persist_rtmp_ingest_endpoint">Persist RTMP ingest endpoint</string>
+
+  <!--  Copublish request status fragment-->
+  <string name="ism_copublish_request_pending_heading">Your request to be a co-publisher in the live broadcast is pending</string>
+  <string name="ism_copublish_request_pending_description">You can either continue watching until %1$s accepts copublish request or delete the request</string>
+  <string name="ism_delete">Delete</string>
+
+  <!--  Copublish chat messages-->
+  <string name="ism_copublish_rejected_message">%1$s has rejected %2$s\'s request to join the live broadcast as a co-publisher</string>
+  <string name="ism_copublish_accepted_message">%1$s has accepted %2$s\'s request to join the live broadcast as a co-publisher</string>
+  <string name="ism_copublish_deleted_message">%1$s has deleted request to join the live broadcast as a co-publisher</string>
+  <string name="ism_switch_profile_message">%1$s has switched profile to a co-publisher in the live broadcast</string>
+
+  <!--Gifts fragment-->
+  <string name="ism_coins_balance">%1$s coins</string>
+
+  <!--EndLeave fragment-->
+  <string name="ism_stop_publishing">Stop publishing</string>
+
+
+  <!--MultiLiveSelectMembersActivity activity-->
+  <string name="ism_multilive_members_selected">%1$s of %2$s members</string>
+
+
+  <!--  Stream preview activity-->
+  <string name="ism_preview_disclaimer">Join the broadcast to continue watching as your limit for free preview has been exhausted</string>
+  <string name="ism_preparing_preview">Preparing broadcast preview</string>
+
+  <!--Scrollable streams activity-->
+  <string name="ism_duration_placeholder">00:00</string>
+
+  <!--  Remote settings fragment-->
+  <string name="ism_mute_unmute_audio">%1$s %2$s\'s audio</string>
+  <string name="ism_mute_unmute_video">%1$s %2$s\'s video</string>
+  <string name="ism_settings_unavailable">Setting not available, try again in sometime!!</string>
+  <string name="ism_no_actions_available">No actions available</string>
+
+  <!--  Add metadata fragment-->
+  <string name="ism_add_metadata_helper">Add metadata to the broadcast which is synced with video-frame and even available in recorded video for the broadcast if recording was enabled.</string>
+  <string name="ism_add_metadata">Add metadata</string>
+  <string name="ism_adding_metadata">Adding metadata</string>
+  <string name="ism_metadata_cannot_be_empty">Metadata to be inserted can\'t be empty</string>
+  <string name="ism_metadata_sample">Having fun!!!</string>
+
+  <!--  Recordings activity-->
+  <string name="ism_fetching_recordings">Fetching recordings</string>
+  <string name="ism_no_recordings">No recorded streams found</string>
+  <string name="ism_recording_fail_no_network">Failed to preview recording as internet connection is not available.</string>
+  <string name="ism_recording_preview_fail_reason">Failed to preview recording with error %1$s</string>
+  <string name="ism_recording_preview_not_authorized">Not authorized to preview recording</string>
+  <string name="ism_buffering">Buffering…</string>
+  <string name="ism_paused">Paused</string>
+  <string name="ism_ended">Ended</string>
+  <string name="ism_ready">Ready</string>
+  <string name="ism_vod_status">◼︎ RECORDED BROADCAST</string>
+  <string name="ism_playback_speed">Playback speed</string>
+  <string name="ism_quality_options">Quality options</string>
+  <string name="ism_close">Close</string>
+  <string name="ism_quality_update_failed">Failed to update playback quality</string>
+
+  <!--  Restream-->
+
+  <!--  Select channel type screen-->
+  <string name="ism_facebook">Facebook</string>
+  <string name="ism_youtube">Youtube</string>
+  <string name="ism_twitch">Twitch</string>
+  <string name="ism_twitter">Twitter</string>
+  <string name="ism_linkedin">LinkedIn</string>
+  <string name="ism_custom_rtmp">Custom RTMP</string>
+  <string name="ism_facebook_about">Facebook, the world\'s largest social network, has entered the live streaming game. Facebook Live boasts the largest audience globally, great interactive features for audience members, and filters for customizing live streams. The streaming content on Facebook is as diverse as the platform itself; publishers include everyone from average people to world-famous celebrities.</string>
+  <string name="ism_youtube_about">With over 1 billion users, YouTube is the biggest video viewing platform in the world. It remains the #1 platform for gamers to watch gaming content worldwide.</string>
+  <string name="ism_twitch_about">Twitch is the world’s leading social video platform and community for gamers. +100 million community members visit Twitch monthly to watch and connect with more than 1.7 million broadcasters. This is a platform for real video game enthusiasts.</string>
+  <string name="ism_twitter_about">Twitter is the place to see what\'s happening in the world—from breaking news to major live events. You can easily create live videos to share what\'s happening live.</string>
+  <string name="ism_linkedin_about">LinkedIn — the social network for the working world with close to 600 million users globally. LinkedIn Live focus on streaming things like Q&amp;As, events, conferences, earnings calls, awards ceremonies, product announcements, and more.</string>
+  <string name="ism_custom_rtmp_about">Allows you to add a Custom RTMP channel for restreaming.</string>
+  <string name="ism_facebook_learn_more_link">https://support.stageten.tv/en/articles/3981648-streaming-to-facebook-via-rtmp</string>
+  <string name="ism_youtube_learn_more_link">https://support.switcherstudio.com/en/articles/3553932-streaming-to-youtube-using-custom-rtmp</string>
+  <string name="ism_twitch_learn_more_link">https://help.pexip.com/service/stream-twitch.htm</string>
+  <string name="ism_twitter_learn_more_link">https://help.twitter.com/en/using-twitter/how-to-use-live-producer#RTMP</string>
+  <string name="ism_linkedin_learn_more_link">https://www.linkedin.com/help/linkedin/answer/128901/go-live-using-a-custom-stream-rtmp-?lang=en</string>
+  <string name="ism_custom_rtmp_learn_more_link">https://support.restream.io/en/articles/369436-custom-rtmp-channel</string>
+
+
+  ism_custom_rtmp_more
+
+  <!--  Add channel details screen-->
+  <string name="ism_select_channel_type">Select Channel Type</string>
+  <string name="ism_channel_name">Channel Name</string>
+  <string name="ism_rtmp_url">RTMP Url</string>
+  <string name="ism_stream_key">Stream Key</string>
+  <string name="ism_channel_name_hint">Enter the channel name</string>
+  <string name="ism_rtmp_url_hint">Enter the RTMP/RTMPS endpoint</string>
+  <string name="ism_stream_key_hint">Enter the stream key for authorization</string>
+  <string name="ism_enable_channel">Enable Channel</string>
+  <string name="ism_invalid_channel_type">Select channel type to continue</string>
+  <string name="ism_empty_channel_name">Channel name cannot be empty</string>
+  <string name="ism_empty_rtmp_url">RTMP/RTMPS endpoint cannot be empty</string>
+  <string name="ism_empty_stream_key">Stream key cannot be empty</string>
+  <string name="ism_create">Create</string>
+  <string name="ism_update">Update</string>
+  <string name="ism_add_channel_details">Add Channel Details</string>
+  <string name="ism_update_channel_details">Update Channel Details</string>
+  <string name="ism_update_channel_type">Update Channel Type</string>
+  <string name="ism_learn_more"><u>Learn more</u></string>
+
+  <!--  Fetch channels-->
+  <string name="ism_channels">Restream Channels</string>
+  <string name="ism_toggle_channels">Toggle All Channels</string>
+  <string name="ism_no_channels">No channels found</string>
+
+  <string name="ism_adding_channel">Adding Channel</string>
+  <string name="ism_updating_channel">Updating Channel</string>
+  <string name="ism_deleting_channel">Deleting Channel</string>
+  <string name="ism_fetching_channels">Fetching Channels</string>
+  <string name="ism_updating_channels">Updating Channels</string>
+  <!--Golive activity-channels not found  -->
+  <string name="ism_add_restream_channels">No restream channels found.Add or enable already added channels to restream broadcast.</string>
+  <string name="ism_add_update">Add/Update</string>
+
+  <!--  Capture image result activity-->
+  <string name="ism_done">Done</string>
+  <string name="ism_discard_image">Do you want to discard this image?</string>
+  <string name="ism_discard">Discard</string>
+
+  <!--  Camera activity-->
+  <string name="ism_image_capture_not_supported">Image capture not supported on devices with android version below lollipop.</string>
+
+  <!--  Ecommerce-->
+  <string name="ism_add_to_cart">Add to Cart</string>
+  <string name="ism_added_to_cart">Added to Cart</string>
+  <string name="ism_live_shopping">Live shopping</string>
+  <string name="ism_buy_now">Buy Now</string>
+  <string name="ism_item_details">Item Details</string>
+  <string name="ism_quantity">Quantity: %1$d</string>
+  <string name="ism_view_cart">View Cart</string>
+  <string name="ism_sold_shipped">Sold and shipped by %1$s</string>
+  <string name="ism_featured_products">Featured products</string>
+  <string name="ism_featuring">Now Featuring</string>
+  <string name="ism_quantity_place_holder">Quantity</string>
+  <string name="ism_increment_quantity">+</string>
+  <string name="ism_decrement_quantity">-</string>
+
+
+  <!--  Link products-->
+  <string name="ism_link_products">Link Products</string>
+  <string name="ism_link_products_description">Link products that you want to feature during broadcast.</string>
+  <string name="ism_products_linked">%1$d products linked.</string>
+  <string name="ism_product_linked">%1$d product linked.</string>
+  <string name="ism_link">Link</string>
+  <string name="ism_unlink">Unlink</string>
+  <string name="ism_no_products_found">No products found to link</string>
+
+  <!--  Link products fragment-->
+  <string name="ism_fetching_products">Fetching products</string>
+  <string name="ism_max_products_linked">A broadcast cannot have more than 20 products linked</string>
+  <string name="ism_products_selected">%1$s of %2$s products</string>
+  <string name="ism_link_atleast_one_product">Link atleast one product to continue.</string>
+  <string name="ism_units_in_stock">%1$d units in stock</string>
+
+  <!--  Featured products fragment-->
+  <string name="ism_start_featuring">Start featuring</string>
+  <string name="ism_stop_featuring">Stop featuring</string>
+  <string name="ism_updating_featuring_product_status">Updating featuring product status</string>
+
+  <!--Moderators Fragment-->
+  <string name="ism_stream_moderators">Moderators</string>
+  <string name="ism_no_moderators">No moderators found</string>
+  <string name="ism_removing_moderator">Removing moderator</string>
+  <string name="ism_search_moderators_hint">Search moderators…</string>
+
+  <!--  Add Moderators fragment-->
+  <string name="ism_adding_moderator">Adding moderator</string>
+  <string name="ism_no_users_add_moderator">No users found to make moderator</string>
+  <string name="ism_add_moderator">Add moderator</string>
+  <string name="ism_add_moderator_description">Add moderator to a broadcast who can kickout members or viewers, remove messages and reply to a message.</string>
+
+  <!--  Product details fragment-->
+  <string name="ism_product_details">Product Details</string>
+  <string name="ism_units_in_cart">%1$d units in cart</string>
+  <string name="ism_buy_now_warning">Add product to cart to continue buying.</string>
+  <string name="ism_adding_to_cart">Adding product to cart</string>
+  <string name="ism_buy_now_not_available">Buying product from recorded broadcasts not available.</string>
+  <string name="ism_add_to_cart_not_available">Adding product to cart from recorded broadcasts not available.</string>
+
+  <!--  Cart fragment-->
+  <string name="ism_empty_cart">No products added to cart yet</string>
+  <string name="ism_cart_product_count">%1$d product in cart</string>
+  <string name="ism_cart_products_count">%1$d products in cart</string>
+  <string name="ism_minimum_units_in_cart">A product must have atleast one unit in cart</string>
+  <string name="ism_maximum_units_in_cart">Maximum %1$d units can be added to cart for %2$s</string>
+  <string name="ism_updating_quantity_in_cart">Updating product quantity in cart</string>
+  <string name="ism_removing_product_from_cart">Removing product from cart</string>
+  <string name="ism_checkout">Checkout</string>
+  <string name="ism_requesting_checkout">Requesting checkout</string>
+
+  <!--Featuring product fragment-->
+  <string name="ism_stopping_featuring">Stopping featuring product</string>
+  <string name="ism_no_featuring_product_found">No product currently featuring</string>
+
+  <!--  LeaveAsModeratorFragment-->
+  <string name="ism_stop_moderating">Stop Moderating</string>
+  <string name="ism_moderating_heading">You are currently moderating the broadcast</string>
+  <string name="ism_moderating_description">Being a moderator you can kick out members and viewers, reply-to and delete messages.</string>
+  <string name="ism_leaving_as_moderator">Stopping moderation</string>
+  <string name="ism_manage_moderators">Manage Moderators</string>
+
+  <!-- ModeratorAddedRemovedAlert -->
+  <string name="ism_added_as_moderator">Added to moderator\'s group of broadcast</string>
+  <string name="ism_removed_as_moderator">Removed from moderator\'s group of broadcast</string>
+  <string name="ism_added_as_moderator_description">%1$s has been added to the moderator\'s group of the broadcast by %2$s.\nBeing a moderator one can kick out members and viewers, reply-to and delete messages.</string>
+  <string name="ism_removed_as_moderator_description">%1$s has been removed from the moderator\'s group of the broadcast by %2$s.\nWithout being a moderator one can no longer kick out members and viewers, reply-to and delete messages</string>
+
+  <!--MessageRepliesFragment-->
+  <string name="ism_message_reply_hint">Reply to message…</string>
+  <string name="ism_no_replies">No message replies found</string>
+  <string name="ism_message_replies">Message replies-</string>
+  <string name="ism_removing_message_reply">Removing message reply</string>
+  <string name="ism_delete_unsent_message_reply">A message reply can only be deleted after it has been sent.</string>
+  <string name="ism_search_message_replies_hint">Search message replies…</string>
+
+  <!--  Network quality-->
+  <string name="ism_quality_excellent">Excellent</string>
+  <string name="ism_quality_good">Good</string>
+  <string name="ism_quality_poor">Poor</string>
+  <string name="ism_quality_unknown">Unknown</string>
+
+  <!--  RTMP Details fragment-->
+  <string name="ism_rtmp_details_heading">RTMP ingest details</string>
+  <string name="ism_rtmp_details_description">You can livestream from third-party RTMP software, such as OBS, using the provided ingest URL.</string>
+    <string name="copy">Copy</string>
+
+  <string name="ism_tx_quality">Tx Quality- \u0020</string>
+  <string name="ism_rx_quality">Rx Quality- \u0020</string>
+
+  <string name="ism_single_multi_guest_live">Single/Multi Guest Live</string>
+  <string name="ism_live_from_device">Live From Device</string>
+  <string name="ism_add_cover">Add Cover</string>
+  <string name="ism_enter_stream_title">Enter description</string>
+  <string name="use_persistent_rtmp_stream_key">Use Persistent RTMP Stream Key</string>
+  <string name="live_from_device">Live From Device</string>
+  <string name="ism_free">Free</string>
+  <string name="ism_premium">Premium</string>
+  <string name="ism_zero">0</string>
+  <string name="ism_select_tag">Select Tags</string>
+  <string name="ism_schedule_live">Schedule live</string>
+  <string name="date_time_mandatory">Date &amp; Time*</string>
+  <string name="rtmp_url">RTMP URL</string>
+  <string name="rtmp_url_info">If you disable PERSISTENT RTMP URL you will get a new URL and a stream key every time you start a new stream</string>
+  <string name="rtmp_key_info">Please copy paste the STREAM KEY and the STREAM URL  into your RTMP streaming device. \n\nIf you want to create a new STREAM KEY in case you think your key is compromised Click here</string>
+  <string name="stream_key">Stream Key</string>
+  <string name="key_will_be_generated_after_you_start_a_new_stream">Key will be generated after you start a new stream</string>
+  <string name="pk_challenge_settings">PK Challenge Settings</string>
+  <string name="pk_challenge_description">Configure your PK challenge by modifying the \nsettings below</string>
+  <string name="winner_takes_all">Winner takes all</string>
+  <string name="winner_description">This would transfer all the gifts earned by the \nlooser to the winner</string>
+  <string name="refuse_all_invitations">Refuse all invitations</string>
+  <string name="warning_change_host">Are you sure that you want to change the host ?</string>
+  <string name="hourly_Ranking">Hourly Ranking</string>
+  <string name="choose_pk_challenge_duration">Choose PK Challenge Duration</string>
+  <string name="confirm_amp_start"><![CDATA[Confirm & Start]]></string>
+  <string name="ism_pk_with_friend">PK With Friends</string>
+  <string name="search">Search</string>
+  <string name="invite">Invite</string>
+  <string name="pking">PKing</string>
+  <string name="online_list">Online list</string>
+  <string name="ism_failed">Failed…</string>
+  <string name="accept">Accept</string>
+  <string name="invite_you_to_link_heading">xyz invite you to link</string>
+  <string name="reject_">Reject (15s)</string>
+  <string name="linking__">Linking…</string>
+  <string name="accept_invite_failed">Accept Invite Failed</string>
+  <string name="pk_invite_id_validation">Pk Invite Id Empty</string>
+  <string name="start_battle_failed">PK Battle Start Failed</string>
+  <string name="zero">0</string>
+  <string name="your_balance">Your Balance</string>
+  <string name="buy_coins">Buy coins</string>
+  <string name="buy_now">Buy Now</string>
+  <string name="no_gifts_category">No gifts in the given category</string>
+  <string name="string_0"> 0 </string>
+  <string name="coins">coins</string>
+  <string name="pk_winner_failed">PK winner Failed</string>
+  <string name="ism_end_pk">End PK</string>
+  <string name="ism_stop_pk">Stop PK</string>
+  <string name="ism_warning_end_pk">Are you sure you want to end your PK?</string>
+  <string name="ism_warning_stop_pk">Are you sure you want to stop PK?</string>
+  <string name="followAndLeave">Follow &amp; leave</string>
+  <string name="recharge">Recharge</string>
+  <string name="insufficient_balance_message">Not enough coins, please recharge and try again.</string>
+  <string name="gift_send_msg_before_pk_start">Please wait for the battle to start to send gifts.</string>
+  <string name="gift_send_msg_after_pk_end">Battle stopped. You can not send gifts anymore.</string>
+  <string name="ism_send_gift_failed">Failed to send gift.</string>
+  <string name="coinBalance">Coin Balance</string>
+  <string name="bal_zero">00.00</string>
+
+
+
+  <string name="transactions">Transactions</string>
+  <string name="moneyBalance">Money Balance</string>
+  <string name="wallet">Wallet</string>
+  <string name="allCategories">All Categories</string>
+  <string name="cashWallet">Cash Wallet</string>
+  <string name="transaction">Transaction</string>
+  <string name="debits">Debit</string>
+  <string name="credits">Credit</string>
+  <string name="allTransactions">All</string>
+  <string name="reviewProductAll">All</string>
+  <string name="noTransactionsYet">No Transactions Yet</string>
+
+
+  <string name="no_post_to_add_collection_msg">Save photos and videos to this collection. No one will be notified and only you can see what you\'ve saved.</string>
+  <string name="availabeBalance">Available Balance</string>
+  <string name="transactionId">TXN ID:</string>
+  <string name="dealEnds">Deal Ends in:</string>
+
+  <string name="join_as_co_publisher">Join as co-publisher</string>
+  <string name="join_as_co_publisher_description">Once you join a live broadcast as a co-publisher, anybody can watch it.</string>
+
+
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+  <string name="license_key">license_key</string>
+  <string name="app_secret">app_secret</string>
+  <string name="user_secret">user_secret</string>
+  <string name="connection_string">connection_string</string>
+  <string name="cloudinary_url">cloudinary_url</string>
+  <!--  AR key for gs demo project-->
+  <string name="ar_filters_key">ar_filters_keygi</string>
+
+
+  <string name="isometrik_user_id">isometrik_user_id</string>
+  <string name="user_name">user_name</string>
+  <string name="name">name</string>
+  <string name="userImageUrl">userImageUrl</string>
+  <string name="isometric_token">isometric_token</string>
+
+
+</resources>

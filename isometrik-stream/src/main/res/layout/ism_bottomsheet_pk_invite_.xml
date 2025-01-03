@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    android:paddingBottom="@dimen/ism_dp_25">
+
+    <View
+        android:id="@+id/vPeek"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/ism_dp_20"
+        android:layout_marginTop="@dimen/ism_dp_20"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:layout_marginBottom="@dimen/ism_dp_20"
+        android:background="@drawable/ism_peek_rectangle"
+        android:visibility="invisible" />
+
+    <View
+        android:id="@+id/vDummy"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="@dimen/ism_dp_0"
+        android:layout_centerHorizontal="true" />
+
+    <RelativeLayout
+        android:id="@+id/rel_profile"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/vPeek"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/ism_dp_14">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivInitiatorImage"
+            android:layout_width="@dimen/ism_dp_95"
+            android:layout_height="@dimen/ism_dp_95"
+            app:srcCompat="@drawable/ism_default_profile_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivUserImage"
+            android:layout_width="@dimen/ism_dp_95"
+            android:layout_height="@dimen/ism_dp_95"
+            android:layout_toEndOf="@+id/ivInitiatorImage"
+            app:srcCompat="@drawable/ism_default_profile_image" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivClip"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pk_connection" />
+
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/tvActionHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/ism_dp_44"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginEnd="@dimen/ism_dp_44"
+        android:layout_marginBottom="@dimen/ism_dp_16"
+        android:gravity="center_horizontal"
+        android:text="@string/invite_you_to_link_heading"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_18"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvActionDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvActionHeading"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="@dimen/ism_dp_30"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        android:gravity="center_horizontal"
+        android:text="@string/ism_copublish_request_description"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14" />
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progressbar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_below="@+id/tvActionDescription"
+        android:layout_marginHorizontal="@dimen/ism_dp_20"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:indeterminate="true"
+        android:max="100"
+        android:progress="50"
+        android:progressBackgroundTint="@color/ism_gray"
+        android:progressTint="@color/ism_start_color"
+        android:visibility="gone"
+        app:trackColor="@color/ism_start_color" />
+
+    <LinearLayout
+        android:id="@+id/ll_bottom_buttons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvActionDescription"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginTop="@dimen/ism_dp_20"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:visibility="visible"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvReject"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            android:layout_weight="1"
+            android:background="@drawable/ism_cancel_button"
+            android:elevation="@dimen/ism_dp_3"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ism_dp_8"
+            android:paddingBottom="@dimen/ism_dp_8"
+            android:text="@string/reject_"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_16" />
+
+        <TextView
+            android:id="@+id/tvAccept"
+            android:layout_width="@dimen/ism_dp_0"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_weight="1"
+            android:background="@drawable/ism_gradient_copublish"
+            android:elevation="@dimen/ism_dp_3"
+            android:gravity="center_horizontal"
+            android:paddingTop="@dimen/ism_dp_8"
+            android:paddingBottom="@dimen/ism_dp_8"
+            android:text="@string/ism_accept"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_16" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvClose"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ism_dp_20"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:background="@drawable/ism_cancel_button"
+        android:elevation="@dimen/ism_dp_3"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/ism_dp_8"
+        android:layout_below="@+id/ll_bottom_buttons"
+        android:paddingBottom="@dimen/ism_dp_8"
+        android:text="@string/ism_close"
+        android:visibility="gone"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_16" />
+
+
+</RelativeLayout>

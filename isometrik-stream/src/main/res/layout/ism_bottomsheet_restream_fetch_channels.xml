@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/ism_white"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlHeader"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+    <TextView
+        android:fontFamily="@font/sf_pro_semibold"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/ism_channels"
+        android:textColor="@color/ism_title_black"
+        android:textSize="@dimen/ism_sp_20"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@android:color/transparent"
+        android:id="@+id/btAdd"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        android:text="@string/ism_add"
+        android:textAllCaps="false"
+        android:textColor="@color/ism_blue"
+        android:textSize="@dimen/ism_sp_16"
+        tools:ignore="RtlCompat"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:background="@android:color/transparent"
+        android:id="@+id/ibClose"
+        android:layout_alignParentStart="true"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        android:tint="@color/ism_text_black"
+        app:srcCompat="@drawable/ism_ic_close"
+        />
+
+  </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_below="@+id/rlHeader"
+            android:id="@+id/rlToggleChannels"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ism_dp_48">
+
+          <TextView
+              android:id="@+id/tvToggleChannels"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:text="@string/ism_toggle_channels"
+              android:textColor="@color/ism_title_black"
+              android:textSize="@dimen/ism_sp_16"
+              android:layout_marginStart="@dimen/ism_dp_16"
+              android:layout_centerVertical="true"
+              />
+
+          <androidx.appcompat.widget.SwitchCompat
+              android:id="@+id/swToggleChannels"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/ism_dp_3"
+              android:layout_toEndOf="@+id/tvToggleChannels"
+              android:layout_marginStart="@dimen/ism_dp_10"
+              android:layout_centerVertical="true"
+              />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlToggleChannels"
+            android:id="@+id/rvChannels"
+            android:layout_marginBottom="@dimen/ism_dp_16"
+            />
+
+        <TextView
+            android:id="@+id/tvNoChannels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlToggleChannels"
+            android:layout_centerHorizontal="true"
+            android:drawablePadding="@dimen/ism_dp_8"
+            app:drawableTopCompat="@drawable/ism_ic_no_viewers"
+            android:gravity="center"
+            android:text="@string/ism_no_channels"
+            android:textColor="@color/ism_black"
+            android:layout_margin="@dimen/ism_dp_36"
+            android:visibility="gone"
+            />
+
+</RelativeLayout>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "47635477512",
+    "firebase_url": "https://isometrik-groupstreaming.firebaseio.com",
+    "project_id": "isometrik-groupstreaming",
+    "storage_bucket": "isometrik-groupstreaming.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:47635477512:android:83295df3948eeeeff08dbd",
+        "android_client_info": {
+          "package_name": "io.isometrik.samples.gs"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "47635477512-ft6rgq3h8bvos4hnm7s4dd1tdds8870j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBoKGvK-Lch-jlBcVKjPe2nkLpsG0b1xhQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "47635477512-ft6rgq3h8bvos4hnm7s4dd1tdds8870j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

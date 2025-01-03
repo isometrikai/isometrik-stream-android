@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <TextView
+      android:id="@+id/tvHeading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_added_to_cart"
+      android:layout_below="@+id/vPeek"
+      android:textStyle="bold"
+      android:layout_margin="@dimen/ism_dp_8"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProductImage"
+      android:layout_width="@dimen/ism_dp_60"
+      android:layout_height="@dimen/ism_dp_60"
+      app:srcCompat="@drawable/ism_ic_product_default_image"
+      android:layout_below="@+id/tvHeading"
+      android:layout_margin="@dimen/ism_dp_13"
+      />
+
+  <TextView
+      android:id="@+id/tvProductName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvHeading"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Product Name"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      />
+
+  <TextView
+      android:id="@+id/tvProductPrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="20$"
+      android:textColor="@color/ism_identifier_text_white"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvQuantity"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductPrice"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="@string/ism_quantity"
+      android:textColor="@color/ism_quantity_grey"
+      android:textSize="@dimen/ism_sp_12"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlViewCart"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvQuantity"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:background="@drawable/ism_view_cart_background"
+      >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_view_cart"
+        android:textSize="@dimen/ism_sp_16"
+        app:drawableStartCompat="@drawable/ism_cart"
+        android:drawablePadding="@dimen/ism_dp_5"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/ism_dp_10" />
+
+  </RelativeLayout>
+
+</RelativeLayout>

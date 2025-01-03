@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rlParent"
+    android:background="@color/ism_white"
+    android:keepScreenOn="true"
+    >
+  <com.google.android.material.appbar.AppBarLayout
+      android:id="@+id/abLayout"
+      android:layout_width="match_parent"
+      android:background="@color/ism_white"
+      android:layout_height="wrap_content"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+      <androidx.appcompat.widget.Toolbar
+          app:contentInsetStart="@dimen/ism_dp_0"
+          app:contentInsetStartWithNavigation="@dimen/ism_dp_0"
+          android:layout_width="match_parent"
+          android:layout_height="?attr/actionBarSize"
+          app:layout_collapseMode="pin" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivProfile"
+              android:layout_width="@dimen/ism_dp_60"
+              android:layout_height="@dimen/ism_dp_60"
+              android:layout_centerVertical="true"
+              android:layout_margin="@dimen/ism_dp_5"
+              android:background="@android:color/transparent"
+              app:srcCompat="@drawable/ism_default_profile_image"
+              android:elevation="@dimen/ism_dp_3"
+              />
+          <TextView
+              android:id="@+id/tvTitle"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerInParent="true"
+              android:fontFamily="@font/sf_pro_semibold"
+              android:text="@string/ism_live_streams"
+              android:textColor="@color/ism_title_black"
+              android:textSize="@dimen/ism_sp_20"
+              />
+
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivRecordings"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerVertical="true"
+              android:layout_toStartOf="@+id/ivCoin"
+              app:srcCompat="@drawable/ism_ic_recording"
+              android:elevation="@dimen/ism_dp_3"
+              android:padding="@dimen/ism_dp_8"
+              />
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivCoin"
+              android:layout_width="@dimen/ism_dp_45"
+              android:layout_height="@dimen/ism_dp_45"
+              android:padding="@dimen/ism_dp_10"
+              android:layout_centerVertical="true"
+              android:layout_alignParentEnd="true"
+              android:src="@drawable/ic_coin"/>
+          <View
+              android:layout_width="match_parent"
+              android:layout_height="@dimen/ism_dp_1"
+              android:background="@color/ism_seperator_gray"
+              android:layout_alignParentBottom="true"
+              />
+        </RelativeLayout>
+      </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.tabs.TabLayout
+          android:id="@+id/tlStreamsTypes"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlActionBar"
+          android:layout_marginStart="@dimen/ism_dp_13"
+          android:layout_marginBottom="@dimen/ism_dp_8"
+          android:clipToPadding="true"
+          app:tabIndicatorHeight="@dimen/ism_dp_0"
+          app:tabMode="scrollable"
+          app:tabPaddingEnd="@dimen/ism_dp_8"
+          app:tabPaddingStart="@dimen/ism_dp_0"
+          app:tabRippleColor="@android:color/transparent"
+          android:layout_marginTop="?actionBarSize" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/vpStreamsFragments"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="104dp"
+        />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/btGoLive"
+      android:layout_width="@dimen/ism_dp_72"
+      android:layout_height="@dimen/ism_dp_72"
+      android:layout_marginBottom="@dimen/ism_dp_30"
+      android:layout_gravity="center_horizontal|bottom"
+      android:background="@drawable/ism_golive_circle"
+      app:srcCompat="@drawable/ism_ic_golive_video"
+      android:padding="@dimen/ism_dp_18"
+      android:elevation="@dimen/ism_dp_5"
+      />
+
+  <include
+      android:id="@+id/incConnectionState"
+      android:layout_marginTop="?attr/actionBarSize"
+      layout="@layout/ism_overlay_connection_state"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

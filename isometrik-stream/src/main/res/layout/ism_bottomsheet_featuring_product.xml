@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <TextView
+      android:id="@+id/tvHeading"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textSize="@dimen/ism_sp_18"
+      android:layout_centerHorizontal="true"
+      android:textColor="@color/ism_white"
+      android:text="@string/ism_featuring"
+      android:layout_below="@+id/vPeek"
+      android:textStyle="bold"
+      android:layout_margin="@dimen/ism_dp_8"
+      android:maxLines="1"
+      android:ellipsize="end"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlProductDetails"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvHeading"
+      >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProductImage"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      app:srcCompat="@drawable/ism_ic_product_default_image"
+      android:layout_margin="@dimen/ism_dp_13"
+      />
+
+  <TextView
+      android:id="@+id/tvProductName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_marginTop="@dimen/ism_dp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvPrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductName"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:singleLine="true"
+      android:textColor="@color/ism_quantity_grey"
+      android:textSize="@dimen/ism_sp_14"
+      android:layout_toEndOf="@+id/ivProductImage"
+      />
+
+<!--  <View-->
+<!--      android:id="@+id/seperator"-->
+<!--      android:layout_width="@dimen/ism_dp_2"-->
+<!--      android:layout_height="@dimen/ism_dp_2"-->
+<!--      android:layout_below="@+id/tvProductName"-->
+<!--      android:layout_toEndOf="@+id/tvPrice"-->
+<!--      android:layout_marginStart="@dimen/ism_dp_5"-->
+<!--      android:layout_marginEnd="@dimen/ism_dp_5"-->
+<!--      android:layout_marginTop="@dimen/ism_dp_12"-->
+<!--      android:background="@color/ism_quantity_grey"-->
+<!--      />-->
+
+<!--  <TextView-->
+<!--      android:id="@+id/tvProductAttribute"-->
+<!--      android:layout_width="wrap_content"-->
+<!--      android:layout_height="wrap_content"-->
+<!--      android:layout_below="@+id/tvProductName"-->
+<!--      android:layout_marginEnd="@dimen/ism_dp_5"-->
+<!--      android:layout_marginTop="@dimen/ism_dp_2"-->
+<!--      android:layout_toEndOf="@+id/seperator"-->
+<!--      android:ellipsize="end"-->
+<!--      android:maxLines="1"-->
+<!--      android:singleLine="true"-->
+<!--      android:text="XL, M, L"-->
+<!--      android:textColor="@color/ism_quantity_grey"-->
+<!--      android:textSize="@dimen/ism_sp_14"-->
+<!--      />-->
+
+  <View
+      android:id="@+id/dummyView"
+      android:layout_width="@dimen/ism_dp_0"
+      android:layout_height="@dimen/ism_dp_0"
+      android:layout_centerHorizontal="true"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btAddToCart"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_add_to_cart"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:textColor="@color/ism_text_black"
+      android:gravity="center"
+      android:background="@drawable/ism_featured_product_button_background"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      android:layout_toStartOf="@+id/dummyView"
+      android:layout_below="@+id/ivProductImage"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btViewInCart"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_units_in_cart"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:textColor="@color/ism_text_black"
+      android:gravity="center"
+      android:background="@drawable/ism_featured_product_button_background"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      android:layout_toStartOf="@+id/dummyView"
+      android:layout_below="@+id/ivProductImage"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btItemDetails"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:textSize="@dimen/ism_sp_14"
+      android:text="@string/ism_item_details"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginStart="@dimen/ism_dp_8"
+      android:textColor="@color/ism_white"
+      android:backgroundTint="@color/ism_featuring_button_grey"
+      android:gravity="center"
+      android:background="@drawable/ism_featured_product_button_background"
+      android:textAllCaps="false"
+      app:elevation="@dimen/ism_dp_8"
+      android:layout_toEndOf="@+id/dummyView"
+      android:layout_below="@+id/ivProductImage"
+      />
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvNoFeaturingProduct"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerHorizontal="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:layout_below="@+id/tvHeading"
+      app:drawableTopCompat="@drawable/ism_ic_no_users"
+      android:gravity="center"
+      android:text="@string/ism_no_featuring_product_found"
+      android:textColor="@color/ism_white"
+      android:layout_margin="@dimen/ism_dp_36"
+      android:visibility="gone"
+      />
+  <!--  Extras relative layout added to remove transparent shimmer problem-->
+  <RelativeLayout
+      android:id="@+id/rlShimmer"
+      android:background="@color/ism_black"
+      android:layout_width="match_parent"
+      android:layout_below="@+id/tvHeading"
+      android:clickable="true"
+      android:focusable="true"
+      android:layout_height="wrap_content"
+      android:visibility="gone"
+      >
+
+  <com.facebook.shimmer.ShimmerFrameLayout
+      android:id="@+id/shimmerFrameLayout"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      >
+    <include layout="@layout/ism_bottomsheet_featuring_product_shimmer" />
+
+  </com.facebook.shimmer.ShimmerFrameLayout>
+
+  </RelativeLayout>
+
+</RelativeLayout>

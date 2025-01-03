@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <View
+      android:id="@+id/vPeek"
+      android:layout_margin="@dimen/ism_dp_20"
+      android:layout_width="@dimen/ism_dp_80"
+      android:layout_height="@dimen/ism_dp_4"
+      android:layout_centerHorizontal="true"
+      android:background="@drawable/ism_peek_rectangle"
+      />
+
+  <RelativeLayout
+      android:id="@+id/rlLeave"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/vPeek"
+      android:layout_marginTop="@dimen/ism_dp_8"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLeave"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_leave"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLeave"
+        android:layout_toEndOf="@+id/ivLeave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_leave"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivLeave"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlModerator"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlLeave"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivModerator"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_moderators"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvModerator"
+        android:layout_toEndOf="@+id/ivModerator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_stream_moderators"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivModerator"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+
+  <RelativeLayout
+      android:id="@+id/rlLocalVideo"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlModerator"
+      >
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLocalVideo"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_toggle_mute_video"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocalVideo"
+        android:layout_toEndOf="@+id/ivLocalVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_mute_local_video"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivLocalVideo"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+
+  </RelativeLayout>
+
+  <RelativeLayout
+      android:id="@+id/rlLocalAudio"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlLocalVideo">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLocalAudio"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        app:srcCompat="@drawable/ism_ic_volume"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvLocalAudio"
+        android:layout_toEndOf="@+id/ivLocalAudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:layout_marginStart="@dimen/ism_dp_12"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:text="@string/ism_mute_local_audio"
+        android:ellipsize="end"
+        android:textSize="@dimen/ism_sp_16"
+        android:singleLine="true"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/ivLocalAudio"
+        android:layout_marginEnd="@dimen/ism_dp_18"
+        android:layout_marginStart="@dimen/ism_dp_18"
+        />
+  </RelativeLayout>
+
+</RelativeLayout>

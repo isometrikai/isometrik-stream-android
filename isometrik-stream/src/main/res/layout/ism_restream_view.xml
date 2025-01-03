@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_restream_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rlStreamDescription"
+    android:layout_marginHorizontal="@dimen/ism_dp_16"
+    android:visibility="gone">
+
+    <View
+        android:id="@+id/restreamTopView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@color/ism_white" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvRestream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/restreamTopView"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginBottom="@dimen/ism_dp_10"
+        android:paddingVertical="@dimen/ism_dp_10"
+        android:textColor="@color/ism_white"
+        android:drawableEnd="@drawable/ic_white_right_arrow"
+        android:text="@string/ism_restream" />
+
+    <View
+        android:id="@+id/restreamBottomView"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/tvRestream"
+        android:alpha="0.5"
+        android:background="@color/ism_white" />
+
+
+</RelativeLayout>

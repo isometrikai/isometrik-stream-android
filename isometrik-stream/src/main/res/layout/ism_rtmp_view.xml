@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel_rtmp_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/rlStreamDescription"
+    android:layout_marginHorizontal="@dimen/ism_dp_16"
+    android:visibility="visible">
+
+    <TextView
+        android:id="@+id/tvRtmp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:ellipsize="end"
+        android:visibility="gone"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:text="@string/rtmp_url"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14" />
+
+    <TextView
+        android:id="@+id/etRtmpUrl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRtmp"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:background="@drawable/ism_coverimage_background"
+        android:gravity="start"
+        android:hint="@string/rtmp_url"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:padding="@dimen/ism_dp_12"
+        android:textColor="@color/ism_white"
+        android:textColorHint="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/etRtmpUrlInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvRtmp"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:gravity="start"
+        android:hint="@string/rtmp_url_info"
+        android:maxLines="1"
+        android:textColor="@color/ism_white"
+        android:textColorHint="@color/ism_white"
+        android:textSize="@dimen/ism_sp_12" />
+
+    <ImageView
+        android:id="@+id/img_copy_rtmp_url"
+        android:layout_width="@dimen/ism_dp_24"
+        android:layout_height="@dimen/ism_dp_24"
+        android:layout_alignTop="@+id/etRtmpUrl"
+        android:layout_marginEnd="@dimen/ism_dp_10"
+        android:layout_alignEnd="@+id/etRtmpUrl"
+        android:layout_alignBottom="@+id/etRtmpUrl"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ism_copy"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvStreamKey"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etRtmpUrl"
+        android:layout_marginStart="@dimen/ism_dp_5"
+        android:layout_marginTop="@dimen/ism_dp_15"
+        android:ellipsize="end"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:text="@string/stream_key"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/etRtmpKey"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvStreamKey"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:background="@drawable/ism_coverimage_background"
+        android:gravity="start"
+        android:hint="@string/key_will_be_generated_after_you_start_a_new_stream"
+        android:inputType="textCapSentences"
+        android:maxLines="1"
+        android:padding="@dimen/ism_dp_12"
+        android:textColor="@color/ism_white"
+        android:textColorHint="@color/ism_white"
+        android:textSize="@dimen/ism_sp_14"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/img_copy_rtmp_key"
+        android:layout_width="@dimen/ism_dp_24"
+        android:layout_height="@dimen/ism_dp_24"
+        android:layout_alignTop="@+id/etRtmpKey"
+        android:layout_marginEnd="@dimen/ism_dp_10"
+        android:layout_alignEnd="@+id/etRtmpKey"
+        android:layout_alignBottom="@+id/etRtmpKey"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ism_copy"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/tvRtmpKeyInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/etRtmpKey"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:gravity="start"
+
+        android:hint="@string/rtmp_key_info"
+        android:textColor="@color/ism_white"
+        android:textColorHint="@color/ism_white"
+        android:textSize="@dimen/ism_sp_12"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

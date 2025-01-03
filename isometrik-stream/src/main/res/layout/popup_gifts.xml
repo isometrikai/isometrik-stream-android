@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gift_tab_background">
+
+    <RelativeLayout
+        android:id="@+id/rlGiftHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/ism_dp_10">
+
+        <ImageButton
+            android:id="@+id/ibCloseGift"
+            android:layout_width="@dimen/ism_dp_30"
+            android:layout_height="@dimen/ism_dp_30"
+            android:layout_alignParentStart="true"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/ism_dp_10"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_cross_cover_live" />
+
+        <ImageView
+            android:id="@+id/ivCoinImage"
+            android:layout_width="@dimen/ism_dp_30"
+            android:layout_height="@dimen/ism_dp_30"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="@dimen/ism_dp_10"
+            android:layout_toEndOf="@+id/ibCloseGift"
+            android:src="@drawable/ic_coin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@id/ivCoinImage"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/zero"
+                android:textColor="@color/ism_white"
+                android:textSize="@dimen/ism_sp_12"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_balance"
+                android:textColor="@color/ism_white"
+                android:textSize="@dimen/ism_sp_10" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnBuyCoins"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/curved_primary_color"
+            android:paddingStart="@dimen/ism_dp_15"
+            android:paddingTop="@dimen/ism_dp_8"
+            android:paddingEnd="@dimen/ism_dp_15"
+            android:paddingBottom="@dimen/ism_dp_8"
+            android:text="@string/buy_coins"
+            android:textAllCaps="false"
+            android:textColor="@color/ism_white" />
+    </RelativeLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlGiftHeader"
+        android:padding="0dp"
+        android:background="@color/gift_tab_background"
+        app:tabIndicatorColor="@color/ism_white"
+        app:tabIndicatorHeight="@dimen/ism_dp_1"
+        />
+
+    <View
+        android:id="@+id/dividerTabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0_5"
+        android:background="@color/ism_grey"
+        android:layout_below="@+id/tabLayout" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/dividerTabs" />
+
+    <RelativeLayout
+        android:id="@+id/rlGifts"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tabLayout"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGifts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <TextView
+            android:id="@+id/tvNoGifts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_gifts_category"
+            android:textSize="@dimen/ism_sp_14"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvCoinSpent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/ism_dp_5"
+        android:layout_marginEnd="@dimen/ism_dp_20"
+        android:layout_marginRight="@dimen/ism_dp_20"
+        android:layout_marginBottom="@dimen/ism_dp_5"
+        android:autoSizeMaxTextSize="@dimen/very_big"
+        android:drawableStart="@drawable/ic_coins"
+        android:drawablePadding="@dimen/ism_dp_5"
+        android:padding="@dimen/ism_dp_5"
+        android:text="@string/string_0"
+        android:textColor="#efd101"
+        android:textSize="@dimen/title"
+        android:visibility="gone"
+        tools:ignore="RtlHardcoded,UnusedAttribute,UseCompatTextViewDrawableXml" />
+
+    <!--    <TextView-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_gravity="bottom|end"-->
+    <!--        android:layout_margin="@dimen/dimen_5dp"-->
+    <!--        android:layout_marginEnd="@dimen/dp_20"-->
+    <!--        android:layout_marginRight="@dimen/dp_20"-->
+    <!--        android:layout_marginBottom="@dimen/dp_5"-->
+    <!--        android:autoSizeMaxTextSize="@dimen/very_big"-->
+    <!--        android:drawableStart="@drawable/ic_coins"-->
+    <!--        android:drawablePadding="@dimen/dimen_5dp"-->
+    <!--        android:padding="@dimen/dimen_5dp"-->
+    <!--        android:text="@string/string_0"-->
+    <!--        android:textColor="#efd101"-->
+    <!--        android:textSize="@dimen/title"-->
+    <!--        tools:ignore="RtlHardcoded,UnusedAttribute,UseCompatTextViewDrawableXml" />-->
+</RelativeLayout>

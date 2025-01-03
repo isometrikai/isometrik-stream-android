@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlRootLayout"
+    android:keepScreenOn="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+    <RelativeLayout
+      android:id="@+id/rlRecordings"
+      android:background="@drawable/ism_stream_background"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+      <SurfaceView
+          android:id="@+id/playerSurfaceView"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          />
+
+      <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+          android:id="@+id/refresh"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          >
+      <androidx.recyclerview.widget.RecyclerView
+          android:id="@+id/rvRecordings"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"/>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+      <include
+          android:id="@+id/incPlayerControls"
+          layout="@layout/ism_recording_player_controls"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_alignParentBottom="true"
+          />
+
+    </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvNoRecording"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:drawablePadding="@dimen/ism_dp_8"
+      app:drawableTopCompat="@drawable/ism_ic_no_live_streams"
+      android:gravity="center"
+      android:text="@string/ism_no_recordings"
+      android:textColor="@color/ism_black"
+      android:visibility="gone"
+      />
+
+  <ProgressBar
+      android:id="@+id/pbBuffering"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_centerInParent="true"
+      android:indeterminateTint="@color/ism_black"
+      android:indeterminate="true"
+      android:visibility="gone"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageButton
+      android:id="@+id/ibExit"
+      android:layout_width="@dimen/ism_dp_28"
+      android:layout_height="@dimen/ism_dp_28"
+      android:layout_margin="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_ic_close"
+      android:layout_alignParentStart="true"
+      android:tint="@color/ism_white"
+      android:background="@drawable/ism_golive_circle"
+      />
+
+</RelativeLayout>

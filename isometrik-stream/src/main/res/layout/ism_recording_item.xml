@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_transparent"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivStreamImage"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:contentDescription="@string/ism_app_name"
+      android:scaleType="centerCrop"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivAudioOnly"
+      android:layout_width="@dimen/ism_dp_36"
+      android:layout_height="@dimen/ism_dp_36"
+      app:srcCompat="@drawable/ism_ic_audio_only"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      android:background="@drawable/ism_multiguest_circle"
+      android:padding="@dimen/ism_dp_8"
+      android:layout_alignParentEnd="true"
+      />
+</RelativeLayout>

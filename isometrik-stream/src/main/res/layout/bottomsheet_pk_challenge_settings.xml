@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black">
+
+    <View
+        android:id="@+id/vPeek"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_4"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/ism_dp_20"
+        android:background="@drawable/ism_peek_rectangle" />
+
+    <TextView
+        android:id="@+id/tvPkChallengeHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/ism_dp_14"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginBottom="@dimen/ism_dp_10"
+        android:text="@string/pk_challenge_settings"
+        android:textColor="@color/ism_white"
+        android:layout_below="@+id/vPeek"
+        android:textSize="@dimen/ism_sp_20"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvPkChallengeDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvPkChallengeHeading"
+        android:layout_marginStart="@dimen/ism_dp_14"
+        android:layout_marginEnd="@dimen/ism_dp_30"
+        android:gravity="start"
+        android:text="@string/pk_challenge_description"
+        android:textColor="#B1B6D1"
+        android:textSize="@dimen/ism_sp_14" />
+
+    <RelativeLayout
+        android:id="@+id/rel_winner_view"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_below="@+id/tvPkChallengeDescription"
+        android:layout_margin="10dp"
+        android:background="@drawable/ism_peek_rectangle"
+        android:backgroundTint="#E6FDE3">
+
+        <ImageView
+            android:id="@+id/img_trophy"
+            android:layout_width="90dp"
+            android:layout_margin="@dimen/ism_dp_10"
+            android:src="@drawable/ic_pk_winner_cup"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/tv_winner_heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/ism_dp_10"
+            android:layout_toEndOf="@+id/img_trophy"
+            android:text="@string/winner_takes_all"
+            android:textColor="@color/winner_heading"
+            android:textSize="@dimen/ism_sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_winner_heading"
+            android:layout_marginStart="@dimen/ism_dp_10"
+            android:layout_toEndOf="@+id/img_trophy"
+            android:text="@string/winner_description"
+            android:textColor="@color/ism_black"
+            android:textSize="@dimen/ism_sp_12" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tvPkChellengeSubHeading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_winner_view"
+        android:layout_marginStart="@dimen/ism_dp_10"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginEnd="@dimen/ism_dp_10"
+        android:text="@string/choose_pk_challenge_duration"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_16"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/rel_durations"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_50"
+        android:layout_below="@+id/tvPkChellengeSubHeading"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/toggle_1_min"
+                style="@style/customToggleButton"
+                android:layout_width="@dimen/ism_dp_70"
+                android:layout_height="@dimen/ism_dp_30"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:maxLines="1"
+
+                android:textAllCaps="false"
+                android:textOff="1 min"
+                android:textOn="1 min"
+                android:textSize="@dimen/ism_sp_12"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/toggle_3_min"
+                style="@style/customToggleButton"
+                android:layout_width="@dimen/ism_dp_70"
+                android:layout_height="@dimen/ism_dp_30"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textOff="3 min"
+                android:textOn="3 min"
+                android:textSize="@dimen/ism_sp_12"
+                android:visibility="visible" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/toggle_5_min"
+                style="@style/customToggleButton"
+                android:layout_width="@dimen/ism_dp_70"
+                android:layout_height="@dimen/ism_dp_30"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textOff="5 min"
+                android:textOn="5 min"
+                android:textSize="@dimen/ism_sp_12"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ToggleButton
+                android:id="@+id/toggle_10_min"
+                style="@style/customToggleButton"
+                android:layout_width="@dimen/ism_dp_70"
+                android:layout_height="@dimen/ism_dp_30"
+                android:layout_gravity="center_vertical"
+                android:checked="false"
+                android:maxLines="1"
+                android:textAllCaps="false"
+                android:textOff="10 min"
+                android:textOn="10 min"
+                android:textSize="@dimen/ism_sp_12"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btStartPublish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rel_durations"
+        android:layout_marginStart="@dimen/ism_dp_48"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginEnd="@dimen/ism_dp_48"
+        android:layout_marginBottom="@dimen/ism_dp_16"
+        android:background="@drawable/ism_request_button"
+        android:elevation="@dimen/ism_dp_5"
+        android:gravity="center_horizontal"
+        android:paddingTop="@dimen/ism_dp_14"
+        android:paddingBottom="@dimen/ism_dp_14"
+        android:text="@string/confirm_amp_start"
+        android:textAllCaps="false"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_16" />
+
+</RelativeLayout>

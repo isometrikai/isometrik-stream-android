@@ -1,0 +1,2 @@
+include ':isometrik-stream'
+include ':app'

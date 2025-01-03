@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/clPlayerControls"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:visibility="gone"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_100"
+      android:background="@color/ism_player_controls_background"
+      android:clickable="true"
+      android:focusable="true"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent">
+
+    <TextView
+        android:id="@+id/tvProgress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ism_dp_8"
+        android:gravity="start"
+        android:text="@string/ism_duration_placeholder"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/tvDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/ism_dp_8"
+        android:gravity="end"
+        android:text="@string/ism_duration_placeholder"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+         />
+
+    <ImageView
+        android:id="@+id/ivPlayPause"
+        android:layout_width="@dimen/ism_dp_50"
+        android:layout_height="@dimen/ism_dp_50"
+        android:layout_marginBottom="@dimen/ism_dp_8"
+        android:clickable="true"
+        android:contentDescription="@null"
+        android:focusable="true"
+        android:src="@drawable/ism_ic_pause_button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ism_dp_8"
+        android:layout_marginBottom="@dimen/ism_dp_8"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textSize="@dimen/ism_sp_10"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ivPlayPause"
+        tools:text="text"
+        tools:textColor="@color/ism_playback_status" />
+
+    <ImageView
+        android:id="@+id/ivQuality"
+        android:layout_width="@dimen/ism_dp_36"
+        android:layout_height="@dimen/ism_dp_36"
+        android:layout_marginEnd="@dimen/ism_dp_50"
+        android:background="@drawable/ism_player_control_button_round"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ism_ic_setting_on"
+        android:padding="@dimen/ism_dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ContentDescription"
+        />
+
+    <FrameLayout
+        android:id="@+id/flPlaybackRate"
+        android:layout_width="@dimen/ism_dp_36"
+        android:layout_height="@dimen/ism_dp_36"
+        android:layout_marginStart="50dp"
+        android:background="@drawable/ism_player_control_button_round"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+      <TextView
+          android:id="@+id/tvPlaybackRate"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center"
+          android:textColor="@color/ism_white"
+          android:textSize="@dimen/ism_sp_14"
+          android:textStyle="bold" />
+    </FrameLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLooping"
+        android:layout_width="@dimen/ism_dp_36"
+        android:layout_height="@dimen/ism_dp_36"
+        android:layout_marginEnd="@dimen/ism_dp_16"
+        android:background="@drawable/ism_player_control_button_round"
+        android:clickable="true"
+        android:focusable="true"
+        app:srcCompat="@drawable/ism_ic_auto_loop"
+        android:padding="@dimen/ism_dp_8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/ivPlayPause"
+        />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <SeekBar
+      android:id="@+id/seekBar"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:background="@null"
+      android:progressDrawable="@drawable/ism_seekbar_progress"
+      android:thumb="@drawable/ism_seekbar_thumb"
+      app:layout_constraintBottom_toBottomOf="@id/guideline"
+      app:layout_constraintTop_toTopOf="@id/guideline" />
+
+  <androidx.constraintlayout.widget.Guideline
+      android:id="@+id/guideline"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintGuide_end="@dimen/ism_dp_100" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

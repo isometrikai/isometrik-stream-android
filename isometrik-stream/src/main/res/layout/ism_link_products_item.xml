@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/ism_black"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlLinkProduct"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignParentEnd="true"
+      android:layout_marginEnd="@dimen/ism_dp_16"
+      android:layout_marginTop="@dimen/ism_dp_18"
+      android:background="@drawable/ism_request_button"
+      >
+
+    <TextView
+        android:id="@+id/tvLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:paddingBottom="@dimen/ism_dp_4"
+        android:paddingEnd="@dimen/ism_dp_15"
+        android:paddingStart="@dimen/ism_dp_15"
+        android:paddingTop="@dimen/ism_dp_4"
+        android:text="@string/ism_link"
+        android:textColor="@color/ism_white"
+        />
+
+  </RelativeLayout>
+
+  <TextView
+      android:id="@+id/tvProductName"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_18"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_toStartOf="@+id/rlLinkProduct"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="Product Name"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_16"
+      />
+  <TextView
+      android:id="@+id/tvProductPrice"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductName"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_toStartOf="@+id/rlLinkProduct"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="$20"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvUnitsInStock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductPrice"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_toStartOf="@+id/rlLinkProduct"
+      android:ellipsize="end"
+      android:maxLines="1"
+      android:singleLine="true"
+      android:text="@string/ism_units_in_stock"
+      android:textColor="@color/ism_identifier_text_grey"
+      android:textSize="@dimen/ism_sp_12"
+      />
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_0_5"
+      android:layout_below="@id/ivProductImage"
+      android:layout_marginStart="@dimen/ism_dp_80"
+      android:layout_marginTop="@dimen/ism_dp_11"
+      android:background="@color/ism_white"
+      />
+
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProductImage"
+      android:layout_width="@dimen/ism_dp_70"
+      android:layout_height="@dimen/ism_dp_70"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_13"
+      app:srcCompat="@drawable/ism_ic_product_default_image"
+      />
+
+</RelativeLayout>

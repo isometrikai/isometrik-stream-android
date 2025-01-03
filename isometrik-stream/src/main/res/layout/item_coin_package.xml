@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/ism_dp_3"
+    app:cardCornerRadius="@dimen/ism_dp_5">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/ism_white"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/ism_dp_10">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/ism_black"
+            android:textSize="@dimen/ism_sp_14" />
+
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/ism_dp_50"
+            android:layout_height="@dimen/ism_dp_50"
+            android:layout_margin="@dimen/ism_dp_5"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_coins" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/ism_sp_16"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvOldPrice"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/strike_through"
+            android:textColor="@color/ism_grey"
+            android:textSize="@dimen/ism_sp_14" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="@dimen/ism_dp_5"
+        android:background="@color/ism_red_dark"
+        android:gravity="bottom"
+        android:paddingStart="@dimen/ism_dp_10"
+        android:paddingEnd="@dimen/ism_dp_10"
+        android:rotation="-45"
+        android:textColor="@color/ism_white"
+        android:visibility="gone" />
+</androidx.cardview.widget.CardView>

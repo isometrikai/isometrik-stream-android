@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <!-- The launcher theme. It sets the main window background to the launch_screen drawable -->
+  <style name="Theme.AppCompat.Light.NoActionBar.Launcher">
+    <item name="android:windowBackground">@drawable/ism_splash_screen</item>
+
+  </style>
+  <style name="DialogStyle" parent="Theme.Design.Light.BottomSheetDialog">
+    <item name="android:windowIsFloating">false</item>
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowSoftInputMode">adjustResize</item>
+  </style>
+  <style name="ism_color_switch" >
+    <item name="colorControlActivated">@color/ism_white</item>
+  </style>
+
+  <style name="ShapeAppearanceOverlay.App.CornerSize50Percent" parent="">
+    <item name="cornerSize">50%</item>
+  </style>
+  <!--Toggle-->
+  <style name="customToggleButton">
+    <item name="android:textColor">@color/toggle_text_color_selector</item>
+    <item name="android:background">@drawable/toggle_bg_selecter</item>
+  </style>
+
+  <style name="Text.18sp.BlackColor.productSansBold" parent="ThemeOverlay.MaterialComponents.Light">
+    <item name="android:textColor">@color/ism_black</item>
+    <item name="android:textSize">@dimen/ism_sp_18</item>
+  </style>
+  <style name="BottomSheetTrans" parent="@style/Widget.Design.BottomSheet.Modal">
+    <item name="android:background">@drawable/shape_rounded_dialog_trans</item>
+  </style>
+
+
+  <style name="BaseBottomSheetDialogTrans" parent="@style/Theme.Design.Light.BottomSheetDialog">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="android:windowIsFloating">false</item>
+    <item name="bottomSheetStyle">@style/BottomSheetTrans</item>
+  </style>
+
+  <style name="BottomSheetDialogTransTheme" parent="BaseBottomSheetDialogTrans">
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:windowSoftInputMode">adjustResize</item>
+    <item name="behavior_peekHeight">600dp</item>
+  </style>
+
+  <style name="Text.14sp.Black_hindMedium" parent="ThemeOverlay.MaterialComponents.Light">
+    <item name="android:textColor">@color/ism_black</item>
+    <item name="android:textSize">@dimen/ism_sp_14</item>
+    <item name="android:textAlignment">viewStart</item>
+  </style>
+
+</resources>
+

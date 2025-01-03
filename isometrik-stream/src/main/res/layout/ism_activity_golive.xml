@@ -1,0 +1,664 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlParent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_black"
+    android:focusableInTouchMode="true"
+    android:keepScreenOn="true">
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivCoverImagePlaceHolder"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:scaleType="centerCrop" />
+
+  <SurfaceView
+      android:id="@+id/arCameraView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  <androidx.camera.view.PreviewView
+      android:id="@+id/normalCameraView"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent" />
+
+  <include
+      android:id="@+id/iHeader"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      layout="@layout/layout_go_live_header" />
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_below="@id/iHeader"
+      android:layout_above="@+id/tvDisclaimer"
+      android:scrollbars="none">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+      <LinearLayout
+          android:id="@+id/llStreamType"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/ism_dp_15"
+          android:layout_marginBottom="@dimen/ism_dp_4"
+          android:baselineAligned="false"
+          android:visibility="gone"
+          android:weightSum="2">
+
+        <RelativeLayout
+            android:id="@+id/rlFree"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            android:layout_weight="1"
+            android:background="@drawable/ism_public_button"
+            android:elevation="@dimen/ism_dp_3">
+
+          <TextView
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:drawablePadding="@dimen/ism_dp_5"
+              android:padding="@dimen/ism_dp_9"
+              android:text="@string/ism_free"
+              android:textColor="@color/ism_white"
+              android:textSize="@dimen/ism_sp_16"
+              app:drawableStartCompat="@drawable/ism_ic_public" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlPremium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            android:layout_weight="1"
+            android:background="@drawable/ism_public_button"
+            android:elevation="@dimen/ism_dp_3">
+
+          <TextView
+              android:id="@+id/tvPremium"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:drawablePadding="@dimen/ism_dp_5"
+              android:gravity="center_horizontal"
+              android:padding="@dimen/ism_dp_10"
+              android:text="@string/ism_premium"
+              android:textColor="@color/ism_white"
+              android:textSize="@dimen/ism_sp_16"
+              app:drawableStartCompat="@drawable/ic_diamond" />
+
+          <TextView
+              android:id="@+id/tvCoinsValue"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_centerHorizontal="true"
+              android:drawablePadding="@dimen/ism_dp_8"
+              android:gravity="center_horizontal"
+              android:padding="@dimen/ism_dp_10"
+              android:text="@string/ism_zero"
+              android:textColor="@color/ism_white"
+              android:textSize="@dimen/ism_sp_16"
+              android:visibility="gone"
+              app:drawableEndCompat="@drawable/ic_edit_coins_value"
+              app:drawableStartCompat="@drawable/ic_coin_small" />
+
+        </RelativeLayout>
+      </LinearLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlCoverImage"
+          android:layout_width="85dp"
+          android:layout_height="@dimen/ism_dp_100"
+          android:layout_below="@+id/llStreamType"
+          android:layout_marginHorizontal="@dimen/ism_dp_16"
+          android:layout_marginTop="@dimen/ism_dp_20"
+          android:layout_marginBottom="@dimen/ism_dp_16"
+          android:background="@drawable/ism_coverimage_background"
+          android:elevation="@dimen/ism_dp_2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_cover_icon"
+            android:layout_width="@dimen/ism_dp_40"
+            android:layout_height="@dimen/ism_dp_40"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/ism_dp_16"
+            android:padding="8dp"
+            app:srcCompat="@drawable/ic_add_post_drawer" />
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_cover_icon"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/ism_dp_5"
+            android:text="@string/ism_add_cover"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_10" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCoverImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivRemoveCoverImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:alpha="0.3"
+            android:layout_margin="@dimen/ism_dp_5"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:srcCompat="@drawable/ic_cross_cover_live" />
+
+      </RelativeLayout>
+
+
+      <androidx.appcompat.widget.AppCompatEditText
+          android:id="@+id/etStreamDescription"
+          android:layout_width="match_parent"
+          android:layout_height="@dimen/ism_dp_100"
+          android:layout_alignTop="@+id/rlCoverImage"
+          android:layout_marginEnd="@dimen/ism_dp_16"
+          android:layout_toEndOf="@+id/rlCoverImage"
+          android:background="@drawable/ism_coverimage_background"
+          android:gravity="start"
+          android:hint="@string/ism_enter_stream_title"
+          android:inputType="textMultiLine"
+          android:padding="@dimen/ism_dp_5"
+          android:textColor="@color/ism_white"
+          android:textColorHint="@color/ism_white"
+          android:textSize="@dimen/ism_sp_14" />
+
+      <RelativeLayout
+          android:id="@+id/rlStreamDescription"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlCoverImage"
+          android:layout_marginHorizontal="@dimen/ism_dp_16"
+          android:layout_marginStart="@dimen/ism_dp_16"
+          android:layout_marginTop="@dimen/ism_dp_3"
+          android:layout_marginBottom="@dimen/ism_dp_16">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ism_dp_5"
+            android:background="@drawable/ism_coverimage_background"
+            android:enabled="false"
+            android:hint="@string/ism_user_name"
+            android:inputType="textCapSentences"
+            android:maxLength="20"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/ism_white"
+            android:textColorHint="@color/ism_white"
+            android:textSize="@dimen/ism_sp_16"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSelectTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etUserName"
+            android:layout_marginTop="@dimen/ism_dp_18"
+            android:padding="@dimen/ism_dp_5"
+            android:text="@string/ism_select_tag"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_16"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMore"
+            android:layout_width="@dimen/ism_dp_13"
+            android:layout_height="@dimen/ism_dp_13"
+            android:layout_below="@+id/etUserName"
+            android:layout_marginTop="@dimen/ism_dp_28"
+            android:layout_toEndOf="@+id/tvSelectTags"
+            android:visibility="gone"
+            app:srcCompat="@drawable/ism_ic_arrow_right" />
+
+        <TextView
+            android:id="@+id/tvTags"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/etUserName"
+            android:layout_marginTop="@dimen/ism_dp_18"
+            android:layout_toEndOf="@+id/ivMore"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_5"
+            android:textColor="@color/ism_grey"
+            android:textSize="@dimen/ism_sp_16"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swHdBroadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectTags"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            android:paddingHorizontal="@dimen/ism_dp_3"
+            android:thumb="@null"
+            android:button="@drawable/custom_switch_go_live" />
+
+        <TextView
+            android:id="@+id/tvPrivate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectTags"
+            android:layout_alignTop="@+id/swHdBroadcast"
+            android:layout_alignBottom="@+id/swHdBroadcast"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_toEndOf="@+id/swHdBroadcast"
+            android:ellipsize="end"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:gravity="center"
+            android:maxLines="2"
+            android:text="@string/ism_hd_broadcast"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectTags"
+            android:layout_marginTop="@dimen/ism_dp_13"
+            android:checked="true"
+            android:padding="@dimen/ism_dp_3"
+            android:theme="@style/ism_color_switch"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvPublic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvSelectTags"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_marginTop="@dimen/ism_dp_18"
+            android:layout_toEndOf="@+id/swEcommerce"
+            android:text="@string/ism_public"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14"
+            android:visibility="gone" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swEcommerce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swPublic"
+            android:layout_marginTop="@dimen/ism_dp_3"
+            android:checked="false"
+            android:padding="@dimen/ism_dp_3"
+            android:theme="@style/ism_color_switch"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvEcommerce"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swPublic"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            android:layout_toEndOf="@+id/swEcommerce"
+            android:text="@string/ism_ecommerce"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14"
+            android:visibility="gone" />
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swEnableRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:thumb="@null"
+            android:layout_marginTop="@dimen/ism_dp_13"
+            android:layout_below="@+id/swHdBroadcast"
+            android:paddingHorizontal="@dimen/ism_dp_3"
+            android:button="@drawable/custom_switch_go_live"  />
+
+        <TextView
+            android:id="@+id/tvRecording"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swHdBroadcast"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_marginTop="@dimen/ism_dp_13"
+            android:layout_toEndOf="@+id/swEnableRecording"
+            android:fontFamily="@font/sf_pro_semibold"
+            android:text="@string/ism_record_broadcast"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swRestream"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swEnableRecording"
+            android:paddingHorizontal="@dimen/ism_dp_3"
+            android:layout_marginTop="@dimen/ism_dp_13"
+            android:thumb="@null"
+            android:button="@drawable/custom_switch_go_live"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/tvRestreamBroadcast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/ism_dp_13"
+
+            android:layout_below="@+id/swEnableRecording"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_toEndOf="@+id/swRestream"
+            android:text="@string/ism_restream_broadcast"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14"
+            android:visibility="visible" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swSelfHosted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swRestream"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            android:checked="true"
+            android:padding="@dimen/ism_dp_3"
+            android:theme="@style/ism_color_switch"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvSelfHosted"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swRestream"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:layout_marginTop="@dimen/ism_dp_13"
+            android:layout_toEndOf="@+id/swSelfHosted"
+            android:text="@string/ism_self_hosted"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:id="@+id/rlRtmpIngest"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/swSelfHosted"
+            android:visibility="visible">
+
+          <androidx.appcompat.widget.SwitchCompat
+              android:id="@+id/swPersistRtmpIngestEndpoint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingHorizontal="@dimen/ism_dp_3"
+              android:layout_marginTop="@dimen/ism_dp_13"
+              android:theme="@style/ism_color_switch"
+              android:thumb="@null"
+              android:button="@drawable/custom_switch_go_live"
+              android:visibility="gone" />
+
+          <TextView
+              android:id="@+id/tvPersistRtmpIngestEndpoint"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginStart="@dimen/ism_dp_5"
+              android:layout_marginTop="@dimen/ism_dp_13"
+              android:layout_toEndOf="@+id/swPersistRtmpIngestEndpoint"
+              android:ellipsize="end"
+              android:maxLines="2"
+              android:text="@string/use_persistent_rtmp_stream_key"
+              android:textColor="@color/ism_white"
+              android:textSize="@dimen/ism_sp_14"
+              android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+      </RelativeLayout>
+
+
+      <include
+          android:id="@+id/incRtmpView"
+          layout="@layout/ism_rtmp_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/rlStreamDescription"
+          android:layout_marginHorizontal="@dimen/ism_dp_16"
+          android:visibility="gone">
+
+      </include>
+
+      <include
+          android:id="@+id/incRestreamView"
+          layout="@layout/ism_restream_view"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/incRtmpView"
+          android:layout_marginHorizontal="@dimen/ism_dp_16"
+          android:layout_marginTop="@dimen/ism_dp_10"
+          tools:visibility="visible"/>
+
+      <include
+          android:id="@+id/incLinkProducts"
+          layout="@layout/ism_link_products_overlay"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:layout_below="@+id/incRestreamView"
+          android:layout_marginStart="@dimen/ism_dp_13"
+          android:layout_marginTop="@dimen/ism_dp_13"
+          android:layout_marginEnd="@dimen/ism_dp_13"
+          android:layout_marginBottom="@dimen/ism_dp_13" />
+
+
+
+      <RelativeLayout
+          android:id="@+id/rlAudioOnly"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/ism_dp_16"
+          android:layout_marginEnd="@dimen/ism_dp_18"
+          android:visibility="gone">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swAudioOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_4"
+            android:layout_toStartOf="@+id/tvAudioOnly"
+            android:padding="@dimen/ism_dp_3"
+            android:theme="@style/ism_color_switch" />
+
+        <TextView
+            android:id="@+id/tvAudioOnly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ism_audio_only"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14" />
+
+      </RelativeLayout>
+
+      <RelativeLayout
+          android:id="@+id/rlLowLatency"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_marginTop="@dimen/ism_dp_16"
+          android:layout_marginEnd="@dimen/ism_dp_18"
+          android:visibility="gone">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swLowLatency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_4"
+            android:layout_toStartOf="@+id/tvLowLatency"
+            android:padding="@dimen/ism_dp_3"
+            android:theme="@style/ism_color_switch" />
+
+        <TextView
+            android:id="@+id/tvLowLatency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="@string/ism_low_latency"
+            android:textColor="@color/ism_white"
+            android:textSize="@dimen/ism_sp_14" />
+
+      </RelativeLayout>
+
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivEffects"
+          android:layout_width="@dimen/ism_dp_53"
+          android:layout_height="@dimen/ism_dp_53"
+          android:layout_marginStart="@dimen/ism_dp_20"
+          android:background="@drawable/ism_golive_effects_button"
+          android:elevation="@dimen/ism_dp_3"
+          android:padding="@dimen/ism_dp_13"
+          android:visibility="gone"
+          app:srcCompat="@drawable/ism_ic_effects" />
+
+    </RelativeLayout>
+
+  </androidx.core.widget.NestedScrollView>
+
+
+  <TextView
+      android:id="@+id/tvDisclaimer"
+      android:layout_width="match_parent"
+      android:layout_height="40dp"
+      android:layout_above="@+id/tvGoLive"
+      android:layout_centerHorizontal="true"
+      android:layout_marginHorizontal="@dimen/ism_dp_20"
+      android:layout_marginBottom="-20dp"
+      android:background="@drawable/ism_age_disclaimer_background"
+      android:gravity="center_horizontal|top"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:text="@string/ism_disclaimer"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_12" />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/tvGoLive"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_above="@+id/viewStreamTypesDivider"
+      android:layout_centerHorizontal="true"
+      android:layout_marginHorizontal="@dimen/ism_dp_20"
+      android:layout_marginBottom="@dimen/ism_dp_16"
+      android:background="@drawable/ism_request_button"
+      android:elevation="@dimen/ism_dp_5"
+      android:gravity="center"
+      android:paddingVertical="@dimen/ism_dp_10"
+      android:enabled="true"
+      android:text="@string/ism_go_live"
+      android:textAllCaps="false"
+      android:fontFamily="@font/sf_pro_semibold"
+      android:textColor="@color/ism_gray"
+      android:textSize="@dimen/ism_sp_16"
+      app:elevation="@dimen/ism_dp_8" />
+
+
+  <View
+      android:id="@+id/viewStreamTypesDivider"
+      android:layout_width="match_parent"
+      android:layout_height="1dp"
+      android:layout_above="@+id/llStreamTypes"
+      android:alpha="0.5"
+      android:visibility="visible"
+      android:background="@color/ism_white" />
+
+
+  <LinearLayout
+      android:id="@+id/llStreamTypes"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_alignParentBottom="true"
+      android:layout_marginBottom="@dimen/ism_dp_10"
+      android:baselineAligned="false"
+      android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlMultiStream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/ism_dp_10"
+        android:visibility="visible">
+
+      <TextView
+          android:id="@+id/tvMultiStream"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:text="@string/ism_single_multi_guest_live"
+          android:textColor="@color/ism_white" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivMultiStream"
+          android:layout_width="40dp"
+          android:layout_height="@dimen/ism_dp_1"
+          android:layout_below="@+id/tvMultiStream"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/ism_dp_10"
+          android:visibility="visible"
+          app:srcCompat="@drawable/ism_request_button"
+          app:tint="@color/ism_white" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:alpha="0.5"
+        android:visibility="visible"
+        android:background="@color/ism_white" />
+
+    <RelativeLayout
+        android:id="@+id/rlDeviceStream"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="@dimen/ism_dp_10">
+
+      <TextView
+          android:id="@+id/tvDeviceStream"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_centerHorizontal="true"
+          android:text="@string/live_from_device"
+          android:textColor="@color/ism_filters_gray" />
+
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivLiveFromDevice"
+          android:layout_width="40dp"
+          android:layout_height="@dimen/ism_dp_1"
+          android:layout_below="@+id/tvDeviceStream"
+          android:layout_centerHorizontal="true"
+          android:layout_marginTop="@dimen/ism_dp_10"
+          android:visibility="gone"
+          app:srcCompat="@drawable/ism_request_button"
+          app:tint="@color/ism_white" />
+    </RelativeLayout>
+
+  </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ism_public_unselected"
+    android:id="@+id/rlLinkProducts"
+    android:visibility="gone"
+    android:padding="@dimen/ism_dp_5"
+    >
+
+  <TextView
+      android:id="@+id/tvLinkProducts"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ism_link_products"
+      android:layout_centerHorizontal="true"
+      android:padding="@dimen/ism_dp_13"
+      android:textColor="@color/ism_white"
+      android:textStyle="bold"
+      app:drawableStartCompat="@drawable/ism_ic_link_product"
+      android:drawablePadding="@dimen/ism_dp_8"
+      android:gravity="center"
+      />
+
+  <View
+      android:id="@+id/seperator"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_1"
+      android:layout_below="@+id/tvLinkProducts"
+      android:background="@color/ism_white"
+      />
+
+  <TextView
+      android:id="@+id/tvContent"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="@string/ism_link_products_description"
+      android:layout_below="@+id/seperator"
+      android:layout_centerHorizontal="true"
+      android:gravity="center"
+      android:layout_margin="@dimen/ism_dp_13"
+      android:textColor="@color/ism_white"
+      />
+
+</RelativeLayout>

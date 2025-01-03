@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="@dimen/ism_dp_20">
+
+    <RadioGroup
+        android:id="@+id/rgTransactionType"
+        android:layout_width="@dimen/ism_dp_0"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="21dp"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:gravity="start"
+        android:orientation="horizontal"
+        android:padding="@dimen/ism_dp_2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbAllTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_15"
+            android:background="@drawable/credit_debit_rb_selector"
+            android:button="@null"
+            android:paddingStart="@dimen/ism_dp_15"
+            android:paddingTop="@dimen/ism_dp_5"
+            android:paddingEnd="@dimen/ism_dp_15"
+            android:paddingBottom="@dimen/ism_dp_5"
+            android:text="@string/reviewProductAll"
+            android:textColor="@color/colorPrimary" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbDebitTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_15"
+            android:background="@drawable/credit_debit_rb_selector"
+            android:button="@null"
+            android:paddingStart="@dimen/ism_dp_15"
+            android:paddingTop="@dimen/ism_dp_5"
+            android:paddingEnd="@dimen/ism_dp_15"
+            android:paddingBottom="@dimen/ism_dp_5"
+            android:text="@string/debits" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rbCreditTransactions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/ism_dp_15"
+            android:background="@drawable/credit_debit_rb_selector"
+            android:button="@null"
+            android:paddingStart="@dimen/ism_dp_15"
+            android:paddingTop="@dimen/ism_dp_5"
+            android:paddingEnd="@dimen/ism_dp_15"
+            android:paddingBottom="@dimen/ism_dp_5"
+            android:text="@string/credits" />
+
+    </RadioGroup>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvWalletTransaction"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rgTransactionType" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivEmptyTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/ism_dp_30"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/empty_transactions" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvNoTransactions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ism_dp_12"
+        android:text="@string/noTransactionsYet"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivEmptyTransactions">
+
+    </androidx.appcompat.widget.AppCompatTextView>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/vgNoTransactionsFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="ivEmptyTransactions,tvNoTransactions" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+

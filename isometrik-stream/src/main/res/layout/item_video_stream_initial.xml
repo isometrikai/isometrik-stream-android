@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/con_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/stream_initial_background">
+
+
+    <ImageView
+        android:id="@+id/img_add_join"
+        android:layout_width="@dimen/ism_dp_45"
+        android:layout_height="@dimen/ism_dp_45"
+        android:src="@drawable/ism_ic_add_member"
+        android:visibility="visible"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@+id/view_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:tint="@color/ism_white" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/si_profile"
+        android:layout_width="@dimen/ism_dp_45"
+        android:layout_height="@dimen/ism_dp_45"
+        android:clickable="false"
+        android:src="@drawable/ism_default_profile_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/view_center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.App.CornerSize50Percent"
+        app:strokeColor="@color/ism_white"
+        app:strokeWidth="@dimen/ism_dp_1" />
+
+    <View
+        android:id="@+id/view_center"
+        android:layout_width="10dp"
+        android:layout_height="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ism_dp_5"
+        android:maxLines="1"
+        android:singleLine="true"
+        android:text="Add"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_16"
+        app:layout_constraintStart_toStartOf="@+id/view_center"
+        app:layout_constraintEnd_toEndOf="@+id/view_center"
+        app:layout_constraintTop_toBottomOf="@+id/view_center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/img_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:src="@drawable/circle_count"
+        android:tint="@color/ism_livestatus_red"
+        android:visibility="gone"
+        app:layout_constraintLeft_toLeftOf="@id/tvUserName"
+        app:layout_constraintRight_toRightOf="@+id/tvUserName"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserName" />
+
+    <View
+        android:id="@+id/clicking_view"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <FrameLayout
+        android:id="@+id/frame_stream_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <io.livekit.android.renderer.TextureViewRenderer
+            android:id="@+id/textureViewRenderer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/ic_more"
+        android:layout_width="@dimen/ism_dp_30"
+        android:layout_height="@dimen/ism_dp_30"
+        android:layout_margin="@dimen/ism_dp_10"
+        android:background="@drawable/semi_tran_circle"
+        android:padding="@dimen/ism_dp_5"
+        android:elevation="@dimen/ism_dp_10"
+        android:src="@drawable/ism_ic_more_vertical"
+        android:visibility="gone"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlLockedStream"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/locked_stream_grey"
+    android:visibility="gone"
+    >
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_100"
+      android:layout_alignParentBottom="true"
+      android:focusable="true"
+      android:clickable="true"
+      />
+
+  <View
+      android:layout_width="match_parent"
+      android:layout_height="120dp"
+      android:focusable="true"
+      android:clickable="true"/>
+
+  <View
+      android:layout_height="match_parent"
+      android:layout_width="62dp"
+      android:focusable="true"
+      android:clickable="true"
+      android:layout_alignParentEnd="true"
+     android:layout_below="@id/ivEndStream"
+      />
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivEndStream"
+      android:layout_width="@dimen/ism_dp_44"
+      android:layout_height="@dimen/ism_dp_44"
+      android:layout_alignParentEnd="true"
+      app:srcCompat="@drawable/ism_ic_close"
+      android:layout_marginTop="@dimen/ism_dp_20"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:padding="@dimen/ism_dp_8"
+      android:tint="@color/ism_white"
+      android:focusable="true"
+      android:clickable="true"
+      />
+
+  <androidx.appcompat.widget.AppCompatTextView
+      android:id="@+id/tvCoinsRequiredToUnlock"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:maxLines="1"
+      android:ellipsize="end"
+      android:drawableStart="@drawable/ic_coin_small"
+      android:text="@string/zero"
+      android:drawablePadding="@dimen/ism_dp_4"
+      android:paddingStart="@dimen/ism_dp_12"
+      android:paddingEnd="@dimen/ism_dp_12"
+      android:paddingTop="@dimen/ism_dp_5"
+      android:paddingBottom="@dimen/ism_dp_5"
+      android:elevation="@dimen/ism_dp_3"
+      android:textColor="@color/ism_grey"
+      android:background="@drawable/ism_coin_balance_background"
+      android:layout_centerInParent="true"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btUnlock"
+      android:layout_width="@dimen/ism_dp_100"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_gravity="center"
+      android:layout_margin="@dimen/ism_dp_13"
+      android:background="@drawable/round_side_shape_base_color"
+      android:fontFamily="@font/sf_pro_semibold"
+      android:text="@string/buy_now"
+      android:textAllCaps="false"
+      android:textColor="@color/ism_white"
+      android:textSize="@dimen/ism_sp_14"
+      android:layout_centerHorizontal="true"
+      android:layout_below="@+id/tvCoinsRequiredToUnlock"
+      android:focusable="true"
+      android:clickable="true"
+      />
+
+
+</RelativeLayout>

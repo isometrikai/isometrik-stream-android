@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/ism_white"
+    >
+
+  <RelativeLayout
+      android:id="@+id/rlHeader"
+      android:layout_width="match_parent"
+      android:layout_height="?attr/actionBarSize"
+      style="@style/ThemeOverlay.AppCompat.ActionBar"
+      >
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:fontFamily="@font/sf_pro_semibold"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="@string/ism_select_channel_type"
+        android:textColor="@color/ism_title_black"
+        android:textSize="@dimen/ism_sp_18"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:background="@android:color/transparent"
+        android:id="@+id/btNext"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        android:text="@string/ism_next"
+        android:textAllCaps="false"
+        android:textColor="@color/ism_blue"
+        android:textSize="@dimen/ism_sp_16"
+        tools:ignore="RtlCompat"
+        />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:background="@android:color/transparent"
+        android:id="@+id/ibClose"
+        android:layout_alignParentStart="true"
+        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/ism_dp_16"
+        android:tint="@color/ism_text_black"
+        app:srcCompat="@drawable/ism_ic_close"
+        />
+
+  </RelativeLayout>
+
+  <androidx.core.widget.NestedScrollView
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/rlHeader"
+      >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+      <com.google.android.flexbox.FlexboxLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:flexWrap="wrap"
+          app:justifyContent="center"
+          android:id="@+id/flChannelType"
+          android:visibility="gone"
+          >
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFacebook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivFacebookSelected"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_facebook"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivFacebook"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ism_restream_facebook_tile"
+                />
+
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvYoutube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivYoutubeSelected"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_youtube"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivYoutube"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ism_dp_4"
+                app:srcCompat="@drawable/ism_restream_youtube_tile"
+                />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTwitch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivTwitchSelected"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_twitch"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTwitch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ism_dp_2"
+                app:srcCompat="@drawable/ism_restream_twitch_tile"
+                />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvTwitter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivTwitterSelected"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_twitter"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivTwitter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ism_restream_twitter_tile"
+                />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvLinkedIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivLinkedInSelected"
+              android:layout_width="@dimen/ism_dp_20"
+              android:layout_height="@dimen/ism_dp_20"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_linkedin"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLinkedIn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/ism_dp_3"
+                app:srcCompat="@drawable/ism_restream_linkedin_tile"
+                />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvCustomRtmp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/ism_dp_8"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:layout_marginTop="@dimen/ism_dp_8"
+            >
+
+          <androidx.appcompat.widget.AppCompatImageView
+              android:id="@+id/ivCustomRtmpSelected"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_gravity="end"
+              android:layout_margin="@dimen/ism_dp_5"
+              app:srcCompat="@drawable/ism_channel_type_selected_tick"
+              app:tint="@color/ism_blue"
+              android:visibility="gone"
+              />
+
+          <RelativeLayout
+              android:layout_width="@dimen/ism_dp_160"
+              android:layout_height="@dimen/ism_dp_100"
+              android:padding="@dimen/ism_dp_16"
+              >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="@string/ism_custom_rtmp"
+                android:textColor="@color/ism_black"
+                />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivCustomRtmp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                app:srcCompat="@drawable/ism_restream_custom_rtmp_tile"
+                />
+          </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+
+      </com.google.android.flexbox.FlexboxLayout>
+
+      <RelativeLayout
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:id="@+id/rlChannelDetails"
+          android:visibility="visible"
+          >
+
+        <TextView
+            android:id="@+id/tvChannelName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ism_channel_name"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginTop="@dimen/ism_dp_16"
+            android:layout_marginBottom="@dimen/ism_dp_8"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etChannelName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ism_channel_details_edittext_background"
+            android:hint="@string/ism_channel_name_hint"
+            android:inputType="textUri"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_8"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_below="@+id/tvChannelName"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            />
+
+        <TextView
+            android:id="@+id/tvRtmpUrl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ism_rtmp_url"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginTop="@dimen/ism_dp_16"
+            android:layout_marginBottom="@dimen/ism_dp_8"
+            android:layout_below="@+id/etChannelName"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etRtmpUrl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ism_channel_details_edittext_background"
+            android:hint="@string/ism_rtmp_url_hint"
+            android:inputType="textUri"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_8"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_below="@+id/tvRtmpUrl"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            />
+
+        <TextView
+            android:id="@+id/tvStreamKey"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ism_stream_key"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_below="@+id/etRtmpUrl"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginTop="@dimen/ism_dp_16"
+            android:layout_marginBottom="@dimen/ism_dp_8"
+            />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etStreamKey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ism_channel_details_edittext_background"
+            android:hint="@string/ism_stream_key_hint"
+            android:inputType="text"
+            android:maxLength="100"
+            android:maxLines="1"
+            android:padding="@dimen/ism_dp_8"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_below="@+id/tvStreamKey"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginEnd="@dimen/ism_dp_16"
+            />
+
+        <TextView
+            android:id="@+id/tvEnableChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ism_enable_channel"
+            android:textColor="@color/ism_title_black"
+            android:textSize="@dimen/ism_sp_16"
+            android:layout_below="@+id/etStreamKey"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginTop="@dimen/ism_dp_16"
+            android:layout_marginBottom="@dimen/ism_dp_8"
+            />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swEnableChannel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/ism_dp_3"
+            android:layout_below="@+id/tvEnableChannel"
+            android:layout_marginStart="@dimen/ism_dp_16"
+            android:layout_marginTop="@dimen/ism_dp_5"
+            android:layout_marginBottom="@dimen/ism_dp_16"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvLearnMore"
+            android:autoLink="web"
+            android:layout_toEndOf="@id/swEnableChannel"
+            android:layout_below="@id/tvEnableChannel"
+            android:layout_marginStart="@dimen/ism_dp_5"
+            android:text="@string/ism_learn_more"
+            android:textColor="@color/ism_blue"
+            android:padding="@dimen/ism_dp_8"
+            />
+
+      </RelativeLayout>
+
+    </RelativeLayout>
+  </androidx.core.widget.NestedScrollView>
+
+</RelativeLayout>

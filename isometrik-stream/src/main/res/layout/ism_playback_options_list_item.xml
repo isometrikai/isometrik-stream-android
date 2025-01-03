@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--<layout xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<TextView
+
+    android:id="@+id/tvOptions"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ism_dp_40"
+    android:layout_marginTop="1dp"
+    android:background="@color/ism_white"
+    android:fontFamily="sans-serif-medium"
+    android:gravity="center"
+    android:text="1X"
+    android:textAlignment="center"
+    android:textSize="@dimen/ism_sp_16"
+    android:textColor="@color/ism_playback_options_unselected_gray"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    />
+
+<!--</layout>-->

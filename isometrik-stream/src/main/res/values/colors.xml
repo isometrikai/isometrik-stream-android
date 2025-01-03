@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+  <!--  Streams activity  -->
+  <color name="ism_white">#ffffff</color>
+  <color name="ism_black">#000000</color>
+  <color name="ism_gray">#F8F6F6</color>
+  <color name="ism_text_black">#222222</color>
+  <color name="ism_title_black">#484848</color>
+  <color name="ism_stream_name">#FFFAFAFA</color>
+  <color name="ism_stream_overlay">#77000000</color>
+  <color name="ism_blue">#007AFF</color>
+  <color name="base_color">#007AFF</color>
+  <color name="ism_grey">#757575</color>
+  <color name="ism_seperator_grey">#9E9E9E</color>
+  <color name="ism_category_background">#E4E4FA</color>
+  <color name="ism_stream_category_grey">#757575</color>
+  <!--  Members activity-->
+  <color name="ism_admin_text_blue">#00B3FF</color>
+  <color name="ism_identifier_text_grey">#999999</color>
+  <color name="ism_line_gray">#22000000</color>
+  <color name="ism_green_dark">#FF84DE04</color>
+  <color name="ism_text_gray">#969595</color>
+  <color name="ism_red_dark">#EF5350</color>
+  <color name="ism_text_username">#00B3FF</color>
+  <color name="ism_text_time">#F5F5F5</color>
+
+  <!--  Users Activity-->
+  <color name="ism_divider">#EFEFEF</color>
+  <color name="ism_select_user_blue">#63affc</color>
+  <color name="ism_select_member_grey">#757575</color>
+  <color name="ism_search_grey">#E9E9E9</color>
+  <color name="ism_default_profile_image_background">#5D76FF</color>
+
+  <!--  User's item-->
+  <color name="ism_select_text_blue">#00B3FF</color>
+
+  <!--  Stream details Activity-->
+
+  <color name="ism_stream_details_overlay">#08000000</color>
+  <color name="ism_transparent">#00000000</color>
+
+  <!--  Select members Activity-->
+  <color name="ism_seperator_gray">#e5e5e5</color>
+  <color name="ism_select_member">#808080</color>
+
+  <!--  Copublish activity-->
+  <color name="ism_identifier_text_white">#F5F5F5</color>
+  <color name="ism_jointime_text_white">#EEEEEE</color>
+  <color name="ism_decline_red">#D32F2F</color>
+  <color name="ism_accept_green">#388E3C</color>
+  <color name="ism_cancel_grey">#424242</color>
+  <color name="ism_end_color">#A831FF</color>
+  <color name="ism_start_color">#00B3FF</color>
+  <color name="ism_join_green">#16C40B</color>
+  <color name="ism_profile_grey">#99000000</color>
+  <color name="ism_heart_background_red">#F55065</color>
+  <color name="ism_hint_grey">#666666</color>
+  <color name="ism_livestatus_red">#F22A2A</color>
+  <color name="ism_send_message_grey">#E9E9E9</color>
+  <color name="ism_action_button_grey">#77000000</color>
+  <color name="ism_text_message_background_grey">#22000000</color>
+  <color name="ism_reply_button_grey">#77000000</color>
+
+  <!--  Filters-->
+  <color name="ism_filters_gray">#BDBDBD</color>
+  <!--  Golive Activity-->
+  <color name="ism_disclaimer_red">#EF0000</color>
+  <color name="ism_public_grey">#88BDBDBD</color>
+  <color name="ism_shimmer_grey">#E0E0E0</color>
+
+  <!-- for dominant speaker-voice indicator  -->
+  <color name="color_voice_indicator_circle_0">#00B3FF</color>
+  <color name="color_voice_indicator_circle_1">#F22A2A</color>
+  <color name="color_voice_indicator_circle_2">#16C40B</color>
+  <color name="color_voice_indicator_circle_3">#A831FF</color>
+
+<!--  For recording player-->
+  <color name="ism_playback_status">#99FFFFFF</color>
+  <color name="ism_player_controls_background">#FA2D2E30</color>
+  <color name="ism_button_background">#00B3FF</color>
+  <color name="ism_close_button_text">#00B3FF</color>
+  <color name="ism_playback_options_unselected_gray">#999999</color>
+  <color name="ism_playback_options_selected_blue">#00B3FF</color>
+
+<!--Camera preview activity-->
+  <color name="ism_end_blue">#56C2FA</color>
+  <color name="ism_start_blue">#0389DB</color>
+
+<!--  Ecommerce-->
+  <color name="ism_quantity_grey">#BDBDBD</color>
+  <color name="ism_stream_description_grey">#BDBDBD</color>
+  <color name="ism_featuring_red">#EF0000</color>
+  <color name="ism_featuring_button_grey">#424242</color>
+  <color name="ism_price_grey">#757575</color>
+  <color name="ism_featuring_product_blue">#03A9F4</color>
+  <color name="cutPriceColor">#B7B7B7</color>
+  <color name="winner_heading">#0AC644</color>
+  <color name="toggle_unselected">#B1B6D1</color>
+  <color name="refuse_background">#232323</color>
+  <color name="pk_winner_track">#FF00E2</color>
+  <color name="pk_looser_track">#00EBFF</color>
+  <color name="pk_count_down">#FFFF34</color>
+
+  <color name="ism_search_background">#33FFFFFF</color>
+  <color name="ism_search_stroke">#E6000000</color>
+  <color name="guest_indicator">#F6CD02</color>
+  <color name="gift_tab_background">#99000000</color>
+  <color name="gift_tab_selected">#11000000</color>
+  <color name="locked_stream_grey">#66000000</color>
+  <color name="lightCyanColor">#CDF6F8</color>
+  <color name="greyActualPrice">#BCBCE5</color>
+  <color name="gray_lighter">#FFE7E6E6</color>
+  <color name="allCadetBlue">#AEAEC5</color>
+  <color name="colorSilver1">#B9B9B9</color>
+
+
+
+</resources>

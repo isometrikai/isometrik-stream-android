@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/ism_dp_2"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCategoryName"
+            android:layout_width="0dp"
+            android:layout_height="?actionBarSize"
+            android:background="@color/ism_white"
+            android:gravity="center"
+            android:text="@string/allCategories"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:textColor="@color/ism_black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBack"
+            android:layout_width="?actionBarSize"
+            android:layout_height="@dimen/ism_dp_0"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:backgroundTint="@color/ism_white"
+            android:padding="@dimen/ism_dp_16"
+            android:src="?attr/homeAsUpIndicator"
+            app:layout_constraintBottom_toBottomOf="@+id/tvCategoryName"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tint="@color/ism_black" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabEcomWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/ism_white"
+        app:layout_constraintTop_toBottomOf="@+id/clToolbar"
+        app:tabGravity="fill"
+        app:tabSelectedTextColor="@color/colorPrimary"
+        app:tabTextAppearance="@style/Text.14sp.Black_hindMedium"
+        app:tabIndicatorColor="@color/colorPrimary"
+        app:tabTextColor="@color/ism_grey">
+
+    </com.google.android.material.tabs.TabLayout>
+
+    <View
+        android:id="@+id/viewTab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_1"
+        android:background="@android:color/transparent"
+        app:layout_constraintTop_toBottomOf="@+id/tabEcomWallet" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/vpWallet"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/ism_dp_0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/viewTab" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

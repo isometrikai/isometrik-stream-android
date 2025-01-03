@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+  <item android:state_pressed="true">
+    <shape android:shape="oval">
+      <solid android:color="@color/ism_button_background" />
+      <size android:width="@dimen/ism_dp_250" android:height="@dimen/ism_dp_250" />
+    </shape>
+  </item>
+  <item android:state_pressed="false">
+    <shape android:shape="oval">
+      <solid android:color="#1AFFFFFF" />
+      <size android:width="@dimen/ism_dp_250" android:height="@dimen/ism_dp_250" />
+    </shape>
+  </item>
+</selector>

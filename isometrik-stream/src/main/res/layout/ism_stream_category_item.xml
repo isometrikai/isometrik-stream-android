@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.AppCompatTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tvStreamsCategoryName"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/ism_stream_category_background"
+    android:gravity="center_horizontal"
+    android:paddingBottom="@dimen/ism_dp_5"
+    android:paddingEnd="@dimen/ism_dp_16"
+    android:paddingStart="@dimen/ism_dp_16"
+    android:paddingTop="@dimen/ism_dp_5"
+    android:text="@string/ism_all"
+    android:textColor="@color/ism_stream_category_text_selector"
+    />

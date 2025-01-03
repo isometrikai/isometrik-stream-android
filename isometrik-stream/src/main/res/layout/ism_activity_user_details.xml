@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ism_white">
+
+    <LinearLayout
+        android:id="@+id/llUserDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivProfilePic"
+        android:orientation="vertical"
+        android:padding="@dimen/ism_dp_16">
+
+        <!--name-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ism_dp_5"
+            android:layout_marginBottom="@dimen/ism_dp_5"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="@dimen/ism_dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/ism_dp_5"
+                android:text="@string/ism_user_name_holder"
+                android:textSize="@dimen/ism_sp_16" />
+
+            <TextView
+                android:id="@+id/tvNameValue"
+                android:layout_width="@dimen/ism_dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:maxLength="20"
+
+                android:maxLines="1"
+                android:padding="@dimen/ism_dp_5"
+                android:textColor="@color/ism_title_black"
+                android:textSize="@dimen/ism_sp_16" />
+        </LinearLayout>
+
+        <!--user name-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/ism_dp_1"
+            android:background="@color/ism_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ism_dp_5"
+            android:layout_marginBottom="@dimen/ism_dp_5"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/tvUserIdentifier"
+                android:layout_width="@dimen/ism_dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/ism_dp_5"
+                android:text="@string/ism_user_identifier_holder"
+                android:textSize="@dimen/ism_sp_16" />
+
+            <TextView
+                android:id="@+id/tvUserIdentifierValue"
+                android:layout_width="@dimen/ism_dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:maxLength="50"
+                android:maxLines="2"
+                android:padding="@dimen/ism_dp_5"
+                android:textColor="@color/ism_title_black"
+                android:textSize="@dimen/ism_sp_16" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/ism_dp_5"
+            android:layout_marginBottom="@dimen/ism_dp_5"
+            android:weightSum="5">
+
+            <TextView
+                android:id="@+id/tvRtmpUrl"
+                android:layout_width="@dimen/ism_dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="@dimen/ism_dp_5"
+                android:text="@string/ism_rtmp_ingest_url"
+                android:textSize="@dimen/ism_sp_16" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tvRtmpUrlTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Large"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="@color/ism_black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tvRtmpUrlValue"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textPassword"
+                    android:focusable="false"
+                    android:enabled="false"
+                    />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/img_copy"
+            android:layout_width="@dimen/ism_dp_30"
+            android:layout_height="@dimen/ism_dp_30"
+            android:layout_gravity="end"
+            android:padding="@dimen/ism_dp_2"
+            app:srcCompat="@drawable/ism_copy"
+            android:tint="@color/ism_black"
+            android:layout_marginEnd="@dimen/ism_dp_8"
+            />
+
+
+
+
+    </LinearLayout>
+
+    <!--profile pc-->
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btSwitchUser"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/ism_dp_70"
+        android:layout_marginEnd="@dimen/ism_dp_70"
+        android:layout_marginBottom="@dimen/ism_dp_30"
+        android:background="@drawable/ism_gradient_curved_background"
+        android:text="@string/ism_switch_user"
+        android:textAllCaps="false"
+        android:textColor="@color/ism_white"
+        android:textSize="@dimen/ism_sp_18" />
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/abLayout"
+        style="@style/ThemeOverlay.AppCompat.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/ism_white">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/sf_pro_semibold"
+                android:text="@string/ism_user_details"
+                android:textColor="@color/ism_title_black"
+                android:textSize="@dimen/ism_sp_20" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibBack"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentStart="true"
+
+                android:background="@android:color/transparent"
+                android:padding="@dimen/ism_dp_16"
+                android:tint="@color/ism_text_black"
+                app:srcCompat="@drawable/ism_ic_arrow_back" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/ism_dp_4"
+
+                android:layout_toStartOf="@+id/ibDelete"
+                android:background="@android:color/transparent"
+                android:padding="@dimen/ism_dp_16"
+                app:srcCompat="@drawable/ism_ic_edit" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/ibDelete"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+
+                android:padding="@dimen/ism_dp_16"
+                app:srcCompat="@drawable/ism_ic_delete" />
+
+        </RelativeLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivProfilePic"
+        android:layout_width="@dimen/ism_dp_80"
+        android:layout_height="@dimen/ism_dp_80"
+        android:layout_below="@+id/abLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/ism_dp_20"
+        app:srcCompat="@drawable/ism_default_profile_image" />
+
+    <RelativeLayout
+        android:id="@+id/rlArCamera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llUserDetails"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginTop="@dimen/ism_dp_10"
+        android:layout_marginEnd="@dimen/ism_dp_16">
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/swArCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/ism_dp_13"
+            android:layout_toEndOf="@+id/tvArCamera"
+            android:padding="@dimen/ism_dp_3" />
+
+        <TextView
+            android:id="@+id/tvArCamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/ism_dp_8"
+            android:text="@string/ism_ar_camera"
+            android:textColor="@color/ism_black"
+            android:textSize="@dimen/ism_sp_14" />
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btRestreamChannels"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlArCamera"
+        android:layout_marginStart="@dimen/ism_dp_16"
+        android:layout_marginTop="@dimen/ism_dp_30"
+        android:background="@drawable/ism_restreams_button_background"
+        android:paddingStart="@dimen/ism_dp_16"
+        android:paddingEnd="@dimen/ism_dp_16"
+        android:text="@string/ism_restream_channels"
+        android:textAllCaps="false"
+        android:textColor="@color/ism_black"
+        android:textSize="@dimen/ism_sp_16" />
+
+</RelativeLayout>

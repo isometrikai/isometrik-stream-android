@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/ism_black"
+    >
+
+  <androidx.appcompat.widget.AppCompatImageView
+      android:id="@+id/ivProductImage"
+      android:layout_width="@dimen/ism_dp_45"
+      android:layout_height="@dimen/ism_dp_45"
+      app:srcCompat="@drawable/ism_ic_product_default_image"
+      android:layout_margin="@dimen/ism_dp_13"
+      android:tint="@color/ism_shimmer_grey"
+      />
+
+  <TextView
+      android:id="@+id/tvProductName"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:background="@color/ism_shimmer_grey"
+      android:textSize="@dimen/ism_sp_16"
+      android:layout_toEndOf="@+id/ivProductImage"
+      android:layout_marginTop="@dimen/ism_dp_14"
+      />
+
+  <TextView
+      android:id="@+id/tvPrice"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_below="@+id/tvProductName"
+      android:layout_marginTop="@dimen/ism_dp_2"
+      android:background="@color/ism_shimmer_grey"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:textSize="@dimen/ism_sp_14"
+      android:layout_toEndOf="@+id/ivProductImage"
+      />
+
+  <View
+      android:id="@+id/dummyView"
+      android:layout_width="@dimen/ism_dp_0"
+      android:layout_height="@dimen/ism_dp_0"
+      android:layout_centerHorizontal="true"
+      />
+
+  <RelativeLayout
+      android:id="@+id/btAddToCart"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginStart="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginEnd="@dimen/ism_dp_8"
+      android:background="@color/ism_shimmer_grey"
+      android:layout_toStartOf="@+id/dummyView"
+      android:layout_below="@+id/ivProductImage"
+      />
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btItemDetails"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/ism_dp_40"
+      android:layout_marginEnd="@dimen/ism_dp_13"
+      android:layout_marginTop="@dimen/ism_dp_16"
+      android:layout_marginBottom="@dimen/ism_dp_24"
+      android:layout_marginStart="@dimen/ism_dp_8"
+      android:background="@color/ism_shimmer_grey"
+      android:layout_toEndOf="@+id/dummyView"
+      android:layout_below="@+id/ivProductImage"
+      />
+
+</RelativeLayout>
