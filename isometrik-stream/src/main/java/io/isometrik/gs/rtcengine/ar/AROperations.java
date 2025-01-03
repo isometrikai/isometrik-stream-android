@@ -173,7 +173,7 @@ public class AROperations {
   public void applyFilter(String slot, String path) {
     if (isometrik.isARFiltersEnabled()) {
 
-      isometrik.getAREngine().switchEffect(slot, path);
+//      isometrik.getAREngine().switchEffect(slot, path);
     }
   }
 

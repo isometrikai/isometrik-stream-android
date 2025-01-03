@@ -20,9 +20,7 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Executor;
 import java.util.concurrent.Executors;
 
-import ai.deepar.ar.DeepAR;
 import io.isometrik.gs.Isometrik;
-import io.isometrik.gs.rtcengine.ar.ARCameraUtils;
 
 /**
  * The Capture operations utility to allow capturing of the cover image for the live stream with AR
@@ -46,7 +44,7 @@ public class CaptureOperations {
       Context context) {
     this.isometrik = isometrik;
     if (isometrik.isARFiltersEnabled()) {
-      setupAREngine(arView, isometrik.initializeArEngine(context));
+//      setupAREngine(arView, isometrik.initializeArEngine(context));
     } else {
       this.previewView = previewView;
     }
@@ -57,7 +55,7 @@ public class CaptureOperations {
    */
   public void requestARImageCapture() {
     if (isometrik.isARFiltersEnabled()) {
-      isometrik.getAREngine().takeScreenshot();
+//      isometrik.getAREngine().takeScreenshot();
     }
   }
 
@@ -74,8 +72,8 @@ public class CaptureOperations {
       try {
         ProcessCameraProvider cameraProvider = cameraProviderFuture.get();
         if (isometrik.isARFiltersEnabled()) {
-          new ARCameraUtils().bindImageAnalysis(cameraProvider, isometrik.getAREngine(), context,
-              windowManager);
+//          new ARCameraUtils().bindImageAnalysis(cameraProvider, isometrik.getAREngine(), context,
+//              windowManager);
         } else {
           imageCapture = new NormalCameraUtils().bindPreview(cameraProvider, context, previewView,
               windowManager);
@@ -86,45 +84,45 @@ public class CaptureOperations {
     }, ContextCompat.getMainExecutor(context));
   }
 
-  /**
-   * Initializes surface for the AR engine
-   *
-   * @param arView the AR view
-   * @param deepAR the AR engine instance
-   */
-  private void setupAREngine(SurfaceView arView, DeepAR deepAR) {
-
-    try {
-
-      arView.getHolder().addCallback(new SurfaceHolder.Callback() {
-        @Override
-        public void surfaceCreated(SurfaceHolder holder) {
-        }
-
-        @Override
-        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-
-          if (deepAR != null) {
-            deepAR.setRenderSurface(holder.getSurface(), width, height);
-          }
-        }
-
-        @Override
-        public void surfaceDestroyed(SurfaceHolder holder) {
-
-          if (deepAR != null) {
-            deepAR.setRenderSurface(null, 0, 0);
-          }
-        }
-      });
-      // Surface might already be initialized, so we force the call to onSurfaceChanged
-      arView.setVisibility(View.GONE);
-      arView.setVisibility(View.VISIBLE);
-    } catch (Exception e) {
-
-      e.printStackTrace();
-    }
-  }
+//  /**
+//   * Initializes surface for the AR engine
+//   *
+//   * @param arView the AR view
+//   * @param deepAR the AR engine instance
+//   */
+//  private void setupAREngine(SurfaceView arView, DeepAR deepAR) {
+//
+//    try {
+//
+//      arView.getHolder().addCallback(new SurfaceHolder.Callback() {
+//        @Override
+//        public void surfaceCreated(SurfaceHolder holder) {
+//        }
+//
+//        @Override
+//        public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
+//
+//          if (deepAR != null) {
+//            deepAR.setRenderSurface(holder.getSurface(), width, height);
+//          }
+//        }
+//
+//        @Override
+//        public void surfaceDestroyed(SurfaceHolder holder) {
+//
+//          if (deepAR != null) {
+//            deepAR.setRenderSurface(null, 0, 0);
+//          }
+//        }
+//      });
+//      // Surface might already be initialized, so we force the call to onSurfaceChanged
+//      arView.setVisibility(View.GONE);
+//      arView.setVisibility(View.VISIBLE);
+//    } catch (Exception e) {
+//
+//      e.printStackTrace();
+//    }
+//  }
 
   public void captureNormalPhoto(File file) {
     if (imageCapture != null) {
@@ -162,7 +160,7 @@ public class CaptureOperations {
       e.printStackTrace();
     }
     if (isometrik.isARFiltersEnabled()) {
-      isometrik.releaseArEngine();
+//      isometrik.releaseArEngine();
     }
   }
 }

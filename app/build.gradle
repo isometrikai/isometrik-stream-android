@@ -3,8 +3,12 @@ apply plugin: 'com.google.gms.google-services'
 apply plugin: 'com.google.firebase.crashlytics'
 //apply plugin: 'org.jetbrains.kotlin.android'
 android {
+  namespace 'io.isometrik.samples.gs'
   compileSdk 34
-//  buildToolsVersion "30.0.3"
+
+  buildFeatures {
+    buildConfig = true
+  }
 
   defaultConfig {
     applicationId "io.isometrik.samples.gs"
@@ -30,16 +34,16 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility JavaVersion.VERSION_11
-    targetCompatibility JavaVersion.VERSION_11
+    sourceCompatibility JavaVersion.VERSION_17
+    targetCompatibility JavaVersion.VERSION_17
   }
 }
 
 dependencies {
   implementation fileTree(dir: 'libs', include: ['*.jar'])
-  implementation 'androidx.appcompat:appcompat:1.4.1'
+  implementation 'androidx.appcompat:appcompat:1.7.0'
     implementation project(path: ':isometrik-stream')
     implementation 'androidx.multidex:multidex:2.0.1'
   implementation 'com.google.firebase:firebase-crashlytics:18.2.9'
-  implementation 'androidx.core:core-ktx:1.9.0'
+  implementation 'androidx.core:core-ktx:1.12.0'
 }

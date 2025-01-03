@@ -15,7 +15,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.io.File;
 
-import ai.deepar.ar.DeepAR;
 import io.isometrik.gs.ivs.recording.RecordingOperations;
 import io.isometrik.gs.listeners.RealtimeEventsListenerManager;
 import io.isometrik.gs.managers.BasePathManager;
@@ -28,7 +27,6 @@ import io.isometrik.gs.network.IsometrikConnection;
 import io.isometrik.gs.remote.RemoteUseCases;
 import io.isometrik.gs.response.error.BaseResponse;
 import io.isometrik.gs.response.error.IsometrikError;
-import io.isometrik.gs.rtcengine.ar.ARInitializeListener;
 import io.isometrik.gs.rtcengine.ar.AROperations;
 import io.isometrik.gs.rtcengine.ar.capture.ImageCaptureCallbacks;
 import io.isometrik.gs.rtcengine.rtc.webrtc.MultiLiveBroadcastOperations;
@@ -68,7 +66,7 @@ public class Isometrik {
   /**
    * Initialize Ar Engine
    */
-  private DeepAR deepAR;
+//  private DeepAR deepAR;
   private boolean arFiltersEnabled;
   private AROperations arOperations;
   private String arLicenseKey;
@@ -386,10 +384,10 @@ public class Isometrik {
    *
    * @return the ar engine
    */
-  public DeepAR getAREngine() {
-
-    return deepAR;
-  }
+//  public DeepAR getAREngine() {
+//
+//    return deepAR;
+//  }
 
 
 
@@ -410,7 +408,7 @@ public class Isometrik {
    */
   public void onTerminate() {
 
-    releaseArEngine();
+//    releaseArEngine();
   }
 
   /**
@@ -460,38 +458,38 @@ public class Isometrik {
   }
 
 
-  public void releaseArEngine() {
-    try {
+//  public void releaseArEngine() {
+//    try {
+//
+//      if (deepAR != null) {
+//        deepAR.setRenderSurface(null, 0, 0);
+//        deepAR.release();
+//        deepAR = null;
+//      }
+//    } catch (Exception ignore) {
+//
+//    }
+//  }
 
-      if (deepAR != null) {
-        deepAR.setRenderSurface(null, 0, 0);
-        deepAR.release();
-        deepAR = null;
-      }
-    } catch (Exception ignore) {
-
-    }
-  }
-
-  public DeepAR initializeArEngine(Context context) {
-    if (deepAR == null) {
-      try {
-
-        arEngineInitialized = false;
-        deepAR = new DeepAR(context);
-        deepAR.setLicenseKey(arLicenseKey);
-        deepAR.initialize(context, new ARInitializeListener(this));
-        deepAR.changeLiveMode(true);
-
-        return deepAR;
-      } catch (Exception ignore) {
-        return null;
-      }
-    } else {
-
-      return deepAR;
-    }
-  }
+//  public DeepAR initializeArEngine(Context context) {
+//    if (deepAR == null) {
+//      try {
+//
+//        arEngineInitialized = false;
+//        deepAR = new DeepAR(context);
+//        deepAR.setLicenseKey(arLicenseKey);
+//        deepAR.initialize(context, new ARInitializeListener(this));
+//        deepAR.changeLiveMode(true);
+//
+//        return deepAR;
+//      } catch (Exception ignore) {
+//        return null;
+//      }
+//    } else {
+//
+//      return deepAR;
+//    }
+//  }
 
   boolean arEngineInitialized;
 
