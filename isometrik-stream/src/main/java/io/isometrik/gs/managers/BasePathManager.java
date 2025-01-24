@@ -37,6 +37,8 @@ public class BasePathManager {
 
   private static final String GIFT_BASE_PATH = BuildConfig.GIFT_BASE_PATH;
   private static final String WALLET_BASE_PATH = BuildConfig.WALLET_BASE_PATH;
+  private static final int PORT = BuildConfig.PORT;
+
 
   /**
    * Initialize the path management.
@@ -106,5 +108,9 @@ public class BasePathManager {
     constructedUrl.append(CONNECTIONS_DEFAULT_SUBDOMAIN).append(".").append(CONNECTIONS_BASE_PATH);
 
     return constructedUrl.toString();
+  }
+
+  public int getPort(){
+    return PORT;
   }
 }
