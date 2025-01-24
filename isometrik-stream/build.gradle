@@ -117,7 +117,7 @@ afterEvaluate {
         from components.release
         groupId = 'io.isometrik.stream'
         artifactId = 'android'
-        version = '1.0.6'
+        version = '1.0.9'
       }
     }
   }
