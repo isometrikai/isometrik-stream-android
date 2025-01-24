@@ -59,6 +59,13 @@ android {
     jvmTarget = '17'
   }
 
+  packaging {
+    resources {
+      it.excludes += "META-INF/INDEX.LIST"
+      it.excludes += "META-INF/io.netty.versions.properties"
+    }
+  }
+
 }
 
 dependencies {
