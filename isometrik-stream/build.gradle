@@ -59,10 +59,9 @@ android {
     jvmTarget = '17'
   }
 
-  packaging {
+  packagingOptions {
     resources {
-      it.excludes += "META-INF/INDEX.LIST"
-      it.excludes += "META-INF/io.netty.versions.properties"
+      excludes += ['META-INF/INDEX.LIST', 'META-INF/io.netty.versions.properties']
     }
   }
 
@@ -126,7 +125,7 @@ afterEvaluate {
         from components.release
         groupId = 'io.isometrik.stream'
         artifactId = 'android'
-        version = '1.1.1'
+        version = '1.1.3'
       }
     }
   }

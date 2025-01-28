@@ -6,5 +6,8 @@
 
 -dontwarn  org.conscrypt.ConscryptHostnameVerifier
 -dontwarn  com.google.android.gms.gcm.GcmTaskService
--keep,allowoptimization,allowobfuscation public class io.isometrik.gs.ui.** {*;}
+-keep,allowoptimization,allowobfuscation public class io.isometrik.gs.** {*;}
 -flattenpackagehierarchy io.isometrik.groupstreaming.ui
+
+-keepclassmembernames class io.netty.** { *; }
+-keepclassmembers class org.jctools.** { *; }
